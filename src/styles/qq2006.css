@@ -1,0 +1,183 @@
+/* QQ2006 skin sheet — the global half of the skin.
+ *
+ * Scope discipline: EVERY rule in this file is anchored to
+ * `body[data-ds-skin='qq2006']`, the attribute the ui-skin-qq2006 plugin
+ * mirrors (and boot.tsx restores before the loading page renders). The
+ * default skin is therefore untouched by this file.
+ *
+ * Contents: retro typography, selection, scrollbars, and the shared skin
+ * kit — the classic three-slice window chrome (.qq-skin-title / .qq-skin-head
+ * / .qq-skin-body), three-state title buttons, and the gradient .qq-btn.
+ * Component-level patches (conversation bubbles, sidebar rows, composer…)
+ * live in each component's own .module.css, scoped the same way:
+ *
+ *   body[data-ds-skin='qq2006'] .localClass { … }
+ *
+ * Assets referenced below are served from apps/web/public/qq2006/ (copied
+ * from the mengkunsoft/QQ2006 reproduction; original QQ2006 assets,
+ * copyright Tencent, learning use only — see public/qq2006/README.txt).
+ */
+
+body[data-ds-skin='qq2006'] {
+  font-family: Tahoma, 'SimSun', '宋体', 'Microsoft YaHei', sans-serif;
+  color: rgb(35, 55, 80);
+}
+
+body[data-ds-skin='qq2006'] ::selection {
+  background: rgb(45, 128, 208);
+  color: #fff;
+}
+
+/* ── retro scrollbars ─────────────────────────────────────────────────────── */
+body[data-ds-skin='qq2006'] {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(140, 180, 220) rgb(228, 240, 250);
+}
+body[data-ds-skin='qq2006'] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body[data-ds-skin='qq2006'] ::-webkit-scrollbar-track {
+  background: rgb(228, 240, 250);
+}
+body[data-ds-skin='qq2006'] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, rgb(170, 205, 240), rgb(140, 180, 220));
+  border: 1px solid rgb(120, 165, 215);
+  border-radius: 5px;
+}
+body[data-ds-skin='qq2006'] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, rgb(150, 190, 230), rgb(120, 165, 215));
+}
+
+/* ── nine-slice window chrome kit ────────────────────────────────────────────
+ * The 2006 skin is three horizontal bands (title / head / body), each a
+ * left cap + tiling center + right cap at natural size (the original tiles
+ * 10px-wide repeat patterns). Components compose them as background layers
+ * on one element — no extra DOM. Use the .qq-skin-* classes directly from
+ * TSX (they are :global utilities).
+ */
+body[data-ds-skin='qq2006'] .qq-skin-title {
+  background:
+    url('/qq2006/img/BackgroundTitleRight.png') right top no-repeat,
+    url('/qq2006/img/BackgroundTitleCenter.png') center top repeat-x,
+    url('/qq2006/img/BackgroundTitleLeft.png') left top no-repeat;
+  height: 24px;
+}
+
+body[data-ds-skin='qq2006'] .qq-skin-head {
+  background:
+    url('/qq2006/img/BackgroundTitleRight2.png') right top no-repeat,
+    url('/qq2006/img/BackgroundTitleCenter2.png') center top repeat-x,
+    url('/qq2006/img/BackgroundTitleLeft2.png') left top no-repeat;
+  height: 44px;
+}
+
+body[data-ds-skin='qq2006'] .qq-skin-body {
+  background:
+    url('/qq2006/img/BackgroundR.png') right top repeat-y,
+    url('/qq2006/img/BackgroundC.png') center top repeat,
+    url('/qq2006/img/BackgroundL.png') left top repeat-y;
+}
+
+/* ── three-state title buttons (16×16, Normal/Hover/Down) ─────────────────── */
+body[data-ds-skin='qq2006'] .qq-skin-btn-min,
+body[data-ds-skin='qq2006'] .qq-skin-btn-menu,
+body[data-ds-skin='qq2006'] .qq-skin-btn-color,
+body[data-ds-skin='qq2006'] .qq-skin-btn-close {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-menu {
+  background-image: url('/qq2006/img/MenuButton_Normal.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-menu:hover {
+  background-image: url('/qq2006/img/MenuButton_Hover.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-menu:active {
+  background-image: url('/qq2006/img/MenuButton_Down.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-min {
+  background-image: url('/qq2006/img/MinButton_Normal.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-min:hover {
+  background-image: url('/qq2006/img/MinButton_Hover.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-min:active {
+  background-image: url('/qq2006/img/MinButton_Down.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-color {
+  background-image: url('/qq2006/img/ColorButton_Normal.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-color:hover {
+  background-image: url('/qq2006/img/ColorButton_Hover.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-color:active {
+  background-image: url('/qq2006/img/ColorButton_Down.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-close {
+  background-image: url('/qq2006/img/CloseButton_Normal.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-close:hover {
+  background-image: url('/qq2006/img/CloseButton_Hover.png');
+}
+body[data-ds-skin='qq2006'] .qq-skin-btn-close:active {
+  background-image: url('/qq2006/img/CloseButton_Down.png');
+}
+
+/* ── classic gradient button (replica of the original .qq-btn) ────────────── */
+body[data-ds-skin='qq2006'] .qq-btn {
+  font-size: 12px;
+  line-height: 1.6;
+  font-family: inherit;
+  background: linear-gradient(to bottom, #ffffff, #9fd4ff);
+  border: 1px solid #00558e;
+  border-radius: 3px;
+  cursor: pointer;
+  color: rgb(20, 40, 70);
+  padding: 1px 8px;
+}
+body[data-ds-skin='qq2006'] .qq-btn:focus {
+  box-shadow: inset 0 0 0 1px #ffe762, inset 0 0 0 2px #fcb833;
+}
+body[data-ds-skin='qq2006'] .qq-btn:hover {
+  background: linear-gradient(to bottom, #ffffff, #b9e1ff);
+}
+body[data-ds-skin='qq2006'] .qq-btn:active {
+  background: linear-gradient(to bottom, #97c5ec, #d2f8fd);
+}
+
+/* ── status pill (在线/离线…) ─────────────────────────────────────────────── */
+body[data-ds-skin='qq2006'] .qq-skin-status {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgb(90, 140, 200);
+}
+body[data-ds-skin='qq2006'] .qq-skin-status-on {
+  background: rgb(70, 160, 100);
+}
+body[data-ds-skin='qq2006'] .qq-skin-status-off {
+  background: rgb(170, 180, 192);
+}
+
+/* ── global keyboard-focus ring: the QQ golden outline everywhere ── */
+body[data-ds-skin='qq2006'] :focus-visible {
+  outline: 2px solid rgb(252, 184, 51);
+  outline-offset: 1px;
+}
+
+/* ── message font-size cycle (the A toolbar button): 小/中/大 ── */
+body[data-ds-skin='qq2006'] {
+  --qq-msg-font-size: 13px;
+}
+body[data-ds-skin='qq2006'][data-qq-font='s'] {
+  --qq-msg-font-size: 12px;
+}
+body[data-ds-skin='qq2006'][data-qq-font='l'] {
+  --qq-msg-font-size: 15px;
+}
