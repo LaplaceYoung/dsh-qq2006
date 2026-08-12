@@ -15,7 +15,7 @@
  *    The mirror is an exact retraction set: the plugin only ever removes
  *    the attribute it set, so foreign attributes survive.
  */
-import type { Context } from 'cordis'
+import type { Context } from '@deepseek-ai/cordis'
 // Type-only: pulls the theme service's Context merge (ctx.theme) and the
 // snapshot type; erased at build time, so no runtime cross-package value
 // import (client bundle purity gate).

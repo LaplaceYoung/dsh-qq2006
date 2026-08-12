@@ -25,9 +25,9 @@
   },
   "license": "BSD-3-Clause",
   "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1-rc.1",
     "@deepseek-ai/dsh-client-ui-theme": "^0.0.1",
-    "@deepseek-ai/dsh-invariants": "^0.0.1",
-    "cordis": "^4.0.0-rc.7"
+    "@deepseek-ai/dsh-invariants": "^0.0.1"
   },
   "files": [
     "lib/index.js",

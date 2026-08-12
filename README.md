@@ -1,5 +1,9 @@
 # dsh-qq2006 — DSH 的 QQ2006 皮肤插件
 
+**Topics:** `deepseek-harness` · `dsh-plugin` · `dsh-skin` · `qq2006`
+
+![DSH](https://img.shields.io/badge/DSH-DeepSeek%20Harness-blue) ![plugin](https://img.shields.io/badge/type-plugin-green) ![skin](https://img.shields.io/badge/type-skin-orange)
+
 把 **DSH（DeepSeek Harness）WebUI** 完整改造成 QQ2006 客户端外观的可切换皮肤。
 本仓库是皮肤插件的独立快照：**插件源码 + 全局皮肤表 + 完整素材 + 集成文档**。
 
