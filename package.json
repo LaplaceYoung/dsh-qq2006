@@ -23,7 +23,7 @@
     "./src/*": "./src/*",
     "./package.json": "./package.json"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1-rc.1",
     "@deepseek-ai/dsh-client-ui-theme": "^0.0.1",

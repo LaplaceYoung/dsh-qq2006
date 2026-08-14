@@ -12,7 +12,7 @@ QQ2006 皮肤插件：注册珊瑚蓝主题、镜像 `body[data-ds-skin]`、全�
 
 <p align="center">
   <a href="https://github.com/LaplaceYoung/dsh-qq2006/stargazers"><img src="https://img.shields.io/github/stars/LaplaceYoung/dsh-qq2006?style=flat-square" alt="stars" /></a>
-  <a href="https://github.com/LaplaceYoung/dsh-qq2006/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-BSD--3--Clause-blue?style=flat-square" alt="license" /></a>
+  <a href="https://github.com/LaplaceYoung/dsh-qq2006/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license" /></a>
   <img src="https://img.shields.io/badge/DSH-DeepSeek%20Harness-4d6bfe?style=flat-square" alt="DSH" />
   <img src="https://img.shields.io/badge/type-skin-orange?style=flat-square" alt="skin" />
   <a href="https://github.com/LaplaceYoung/dsh-qq2006/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs" /></a>
@@ -65,7 +65,7 @@ dsh-qq2006/
 │   └── screenshots/        # 效果截图
 ├── docs/qq2006-skin.md     # 总文档：架构/按钮映射/实现清单/验证记录
 ├── README.package.md       # 皮肤契约（机制/补丁规则/素材）
-└── LICENSE                 # BSD-3-Clause
+└── LICENSE                 # MIT
 ```
 
 ## 🛠 开发
@@ -84,7 +84,7 @@ pnpm vitest run packages/client/ui-conversation                # 皮肤相关测
 
 ## 📄 许可
 
-- 插件代码：[BSD-3-Clause](LICENSE)
+- 插件代码：[MIT](LICENSE)
 - QQ2006 素材：腾讯原版，仅供学习交流，请勿商用（`assets/qq2006/README.txt`）
 
 ## 🙏 致谢
