@@ -20,30 +20,32 @@
 
 body[data-ds-skin='qq2006'] {
   font-family: Tahoma, 'SimSun', '宋体', 'Microsoft YaHei', sans-serif;
-  color: rgb(35, 55, 80);
+  /* Coral-blue alias tokens come from the ui-theme sheet (QQ2006_TOKENS);
+     the names below are the official --dsw-alias-* set. */
+  color: var(--dsw-alias-label-primary);
 }
 
 body[data-ds-skin='qq2006'] ::selection {
-  background: rgb(45, 128, 208);
-  color: #fff;
+  background: var(--dsw-alias-brand-primary);
+  color: var(--dsw-alias-label-primary-foreground);
 }
 
 /* ── retro scrollbars ─────────────────────────────────────────────────────── */
 body[data-ds-skin='qq2006'] {
   scrollbar-width: thin;
-  scrollbar-color: rgb(140, 180, 220) rgb(228, 240, 250);
+  scrollbar-color: var(--dsw-alias-border-l2) var(--dsw-alias-scrollbar-bg-l1);
 }
 body[data-ds-skin='qq2006'] ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 body[data-ds-skin='qq2006'] ::-webkit-scrollbar-track {
-  background: rgb(228, 240, 250);
+  background: var(--dsw-alias-scrollbar-bg-l1);
 }
 body[data-ds-skin='qq2006'] ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, rgb(170, 205, 240), rgb(140, 180, 220));
+  background: linear-gradient(to right, rgb(178, 205, 232), rgb(140, 178, 216));
   border: 1px solid rgb(120, 165, 215);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 body[data-ds-skin='qq2006'] ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to right, rgb(150, 190, 230), rgb(120, 165, 215));
@@ -69,7 +71,10 @@ body[data-ds-skin='qq2006'] .qq-skin-head {
     url('/qq2006/img/BackgroundTitleRight2.png') right top no-repeat,
     url('/qq2006/img/BackgroundTitleCenter2.png') center top repeat-x,
     url('/qq2006/img/BackgroundTitleLeft2.png') left top no-repeat;
-  height: 44px;
+  /* Full natural band height (BackgroundTitle2* are 61px tall); showing the
+     whole tile keeps the toolbar surface AND the dark bottom strip that the
+     original QQ2006 toolbar band carries. */
+  height: 61px;
 }
 
 body[data-ds-skin='qq2006'] .qq-skin-body {
@@ -90,6 +95,15 @@ body[data-ds-skin='qq2006'] .qq-skin-btn-close {
   padding: 0;
   cursor: pointer;
   background-color: transparent;
+}
+/* 菜单 is a 65×24 text button in the original QQ2006 (MenuButton_*.png are
+   65×24 — a green gradient button with the white 菜单 label), not a 16×16
+   icon. Display it at native size; the title strip is 24px tall so it fills
+   the band exactly and sits level with the 16×16 color/min/close buttons. */
+body[data-ds-skin='qq2006'] .qq-skin-btn-menu {
+  width: 65px;
+  height: 24px;
+  background-size: 65px 24px;
 }
 body[data-ds-skin='qq2006'] .qq-skin-btn-menu {
   background-image: url('/qq2006/img/MenuButton_Normal.png');
@@ -156,18 +170,21 @@ body[data-ds-skin='qq2006'] .qq-skin-status {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid rgb(90, 140, 200);
+  border: 1px solid var(--dsw-alias-border-l3);
 }
 body[data-ds-skin='qq2006'] .qq-skin-status-on {
-  background: rgb(70, 160, 100);
+  background: var(--dsw-alias-state-success-primary);
 }
 body[data-ds-skin='qq2006'] .qq-skin-status-off {
   background: rgb(170, 180, 192);
 }
 
-/* ── global keyboard-focus ring: the QQ golden outline everywhere ── */
+/* ── global keyboard-focus ring: the QQ golden outline everywhere ──
+ * warn-primary is the QQ2006 amber (#e69628 family) carried by the alias
+ * token overrides; the golden focus ring rides it so the sheet stays
+ * token-driven. */
 body[data-ds-skin='qq2006'] :focus-visible {
-  outline: 2px solid rgb(252, 184, 51);
+  outline: 2px solid var(--dsw-alias-state-warn-primary);
   outline-offset: 1px;
 }
 
