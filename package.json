@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-qq2006",
-  "description": "QQ2006 skin plugin for DSH (DeepSeek Harness): registers the 'qq2006' theme (coral-blue --dsw-alias-* token overrides), mirrors the active theme onto body[data-ds-skin], and ships the global qq2006.css sheet (retro fonts, scrollbars, nine-slice window chrome kit, .qq-btn). Snapshot of the in-tree plugin with the full QQ2006 asset set.",
-  "version": "0.0.1",
+  "description": "QQ2006 skin plugin for DSH (DeepSeek Harness): registers the 'qq2006' theme (coral-blue --dsw-alias-* token overrides), mirrors the active theme onto body[data-ds-skin], and ships the global qq2006.css sheet (retro fonts, scrollbars, nine-slice window chrome kit, .qq-btn).",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "lib/index.js",
@@ -25,19 +25,36 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/cordis": "^4.0.1-rc.1",
-    "@deepseek-ai/dsh-client-ui-theme": "^0.0.1",
-    "@deepseek-ai/dsh-invariants": "^0.0.1"
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-ui-theme": "^0.0.1-rc.1",
+    "@deepseek-ai/dsh-invariants": "^0.0.1-rc.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-client-ui-theme": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-invariants": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
   },
   "files": [
     "lib/index.js",
     "lib/invariant.js",
     "lib/client.js",
     "lib/styles",
-    "lib/types/**/*.d.ts"
+    "lib/types/**/*.d.ts",
+    "assets/qq2006"
   ],
   "scripts": {
-    "bundle": "echo 'build inside the DSH monorepo (tsdown via packages/client/ui-skin-qq2006)'",
-    "watch": "echo 'build inside the DSH monorepo (tsdown via packages/client/ui-skin-qq2006)'"
+    "bundle": "node -e \"console.error('bundle runs inside the DSH monorepo (packages/client/ui-skin-qq2006); prebuilt lib/ artifacts are committed in this repository')\""
   }
 }

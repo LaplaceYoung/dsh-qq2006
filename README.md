@@ -38,7 +38,21 @@ QQ2006 皮肤插件：注册珊瑚蓝主题、镜像 `body[data-ds-skin]`、全�
 
 ## 🚀 快速开始
 
-皮肤跟随 DSH 仓库集成（开发分支 `skin/qq2006`）：
+### 方式一：npm 发行版（dsh plugin 安装）
+
+仓库已包含预构建产物（`lib/`），发行版用户可直接从 GitHub 安装：
+
+```sh
+dsh plugin --profile web add https://github.com/LaplaceYoung/dsh-qq2006
+```
+
+启用后获得：**qq2006 主题注册（全 UI 珊瑚蓝 token 换肤）+ 全局皮肤表**（复古字体、滚动条、九宫格工具类、.qq-btn 三态钮）。
+
+> 能力边界：组件级皮肤（登录窗、面板栏、聊天窗 chrome、列表式消息、QQ 秀右栏）改的是宿主 UI 包的源码，npm 发行版是预构建产物，无法通过插件机制注入。这些效果需要方式二。
+
+### 方式二：源码 monorepo（完整效果）
+
+完整皮肤实现位于 fork 的 `skin/qq2006` 分支：
 
 ```sh
 git clone https://github.com/LaplaceYoung/deepseek-harness.git
@@ -51,10 +65,23 @@ node --import tsx/esm apps/cli/src/bin.ts web
 
 打开 `http://127.0.0.1:3080` → 设置 → 外观 → **QQ2006 皮肤**。
 
+已有 DSH 源码 checkout 的用户，也可以直接应用补丁文件：`git apply patches/qq2006-skin.patch`（基于上游 `deepseek-ai/deepseek-harness` master）。
+
+| 能力 | npm 发行版（方式一） | 源码 monorepo（方式二） |
+|---|---|---|
+| qq2006 主题 + 珊瑚蓝 token 换肤 | ✅ | ✅ |
+| 全局皮肤表（字体/滚动条/九宫格类） | ✅ | ✅ |
+| 登录窗 / 主面板 / 聊天窗 chrome | ❌ | ✅ |
+| 原版列表式消息 / QQ 秀右栏 / 消息操作 | ❌ | ✅ |
+| 素材（按钮图标/头像/提示音） | ❌ | ✅ |
+
+后续计划：待 DSH 官方提供客户端插件的静态资源与 UI 槽位机制后，把组件级皮肤完整迁入插件包，使发行版获得全部效果。
 ## 📦 仓库结构
 
 ```
 dsh-qq2006/
+├── lib/                  # 预构建产物（发行版 dsh plugin 可直接安装）
+├── patches/               # 源码 monorepo 集成补丁（git apply）
 ├── src/
 │   ├── index.ts            # 插件入口
 │   ├── invariant.ts        # 包内不变量

@@ -43,6 +43,7 @@ export const QQ2006_TOKENS: Readonly<Record<string, string>> = Object.freeze({
   '--dsw-alias-bg-mask-2': 'rgba(240, 248, 255, 0.85)',
   '--dsw-alias-bg-mask-3': 'rgba(230, 241, 252, 0.8)',
   '--dsw-alias-bg-mask-photo': 'rgba(255, 255, 255, 0.9)',
+  '--dsw-alias-bg-mask-drop': 'rgba(240, 247, 253, 0.72)',
   '--dsw-alias-bg-module-platform': 'rgb(235, 245, 254)',
   '--dsw-alias-bg-multi-select': 'rgb(213, 232, 250)',
   '--dsw-alias-bg-overlay': 'rgba(245, 250, 255, 0.94)',
