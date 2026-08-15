@@ -14,6 +14,1483 @@ diff --git a/.agents/notes/implemented/feature/skin-qq2006-chat/chat-with-show-s
 new file mode 100644
 index 0000000000..cf87fb2380
 Binary files /dev/null and b/.agents/notes/implemented/feature/skin-qq2006-chat/chat-with-show-sidebar.webp differ
+diff --git a/apps/web/public/qq2006/README.txt b/apps/web/public/qq2006/README.txt
+new file mode 100644
+index 0000000000..ce9057077f
+--- /dev/null
++++ b/apps/web/public/qq2006/README.txt
+@@ -0,0 +1,11 @@
++# QQ2006 素材（img/ 与 sound/）
++
++本目录素材来自 [mengkunsoft/QQ2006](https://github.com/mengkunsoft/QQ2006)
++（QQ2006 HTML 像素级复刻项目）的提取资源。
++
++- 素材版权归腾讯公司（Tencent）所有，来源于原版 QQ2006 安装包。
++- 按该仓库许可：**仅供学习交流，请勿用于商业用途**。
++- 复刻项目与素材来源：https://github.com/mengkunsoft/QQ2006 （作者 mengkun，mkblog.cn）。
++
++DSH 侧皮肤实现见 `packages/client/ui-skin-qq2006`；组件补丁样式分散在各
++ui-* 包的 `.module.css` 中，全部以 `body[data-ds-skin='qq2006']` 作用域隔离。
+diff --git a/apps/web/public/qq2006/img/BackgroundC.png b/apps/web/public/qq2006/img/BackgroundC.png
+new file mode 100644
+index 0000000000..c3cb425140
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundC.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundL.png b/apps/web/public/qq2006/img/BackgroundL.png
+new file mode 100644
+index 0000000000..5fe9a5f37d
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundL.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundR.png b/apps/web/public/qq2006/img/BackgroundR.png
+new file mode 100644
+index 0000000000..f1093a4e41
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundR.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundTitleCenter.png b/apps/web/public/qq2006/img/BackgroundTitleCenter.png
+new file mode 100644
+index 0000000000..ccf911ec48
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundTitleCenter.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundTitleCenter2.png b/apps/web/public/qq2006/img/BackgroundTitleCenter2.png
+new file mode 100644
+index 0000000000..e0ff15444e
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundTitleCenter2.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundTitleLeft.png b/apps/web/public/qq2006/img/BackgroundTitleLeft.png
+new file mode 100644
+index 0000000000..0617d65ed1
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundTitleLeft.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundTitleLeft2.png b/apps/web/public/qq2006/img/BackgroundTitleLeft2.png
+new file mode 100644
+index 0000000000..0f9aca09fb
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundTitleLeft2.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundTitleRight.png b/apps/web/public/qq2006/img/BackgroundTitleRight.png
+new file mode 100644
+index 0000000000..c46002c43c
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundTitleRight.png differ
+diff --git a/apps/web/public/qq2006/img/BackgroundTitleRight2.png b/apps/web/public/qq2006/img/BackgroundTitleRight2.png
+new file mode 100644
+index 0000000000..cfc1b833d6
+Binary files /dev/null and b/apps/web/public/qq2006/img/BackgroundTitleRight2.png differ
+diff --git a/apps/web/public/qq2006/img/ChatRoomButton.png b/apps/web/public/qq2006/img/ChatRoomButton.png
+new file mode 100644
+index 0000000000..da8145640d
+Binary files /dev/null and b/apps/web/public/qq2006/img/ChatRoomButton.png differ
+diff --git a/apps/web/public/qq2006/img/CloseButton_Down.png b/apps/web/public/qq2006/img/CloseButton_Down.png
+new file mode 100644
+index 0000000000..3cd0208c4d
+Binary files /dev/null and b/apps/web/public/qq2006/img/CloseButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/CloseButton_Hover.png b/apps/web/public/qq2006/img/CloseButton_Hover.png
+new file mode 100644
+index 0000000000..244a6852f2
+Binary files /dev/null and b/apps/web/public/qq2006/img/CloseButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/CloseButton_Normal.png b/apps/web/public/qq2006/img/CloseButton_Normal.png
+new file mode 100644
+index 0000000000..9c0c757558
+Binary files /dev/null and b/apps/web/public/qq2006/img/CloseButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/ColorButton_Down.png b/apps/web/public/qq2006/img/ColorButton_Down.png
+new file mode 100644
+index 0000000000..3d3bc63a03
+Binary files /dev/null and b/apps/web/public/qq2006/img/ColorButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/ColorButton_Hover.png b/apps/web/public/qq2006/img/ColorButton_Hover.png
+new file mode 100644
+index 0000000000..0d6e453e1e
+Binary files /dev/null and b/apps/web/public/qq2006/img/ColorButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/ColorButton_Normal.png b/apps/web/public/qq2006/img/ColorButton_Normal.png
+new file mode 100644
+index 0000000000..a58c746f3d
+Binary files /dev/null and b/apps/web/public/qq2006/img/ColorButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/GameButton.png b/apps/web/public/qq2006/img/GameButton.png
+new file mode 100644
+index 0000000000..774c54567c
+Binary files /dev/null and b/apps/web/public/qq2006/img/GameButton.png differ
+diff --git a/apps/web/public/qq2006/img/MailButton.png b/apps/web/public/qq2006/img/MailButton.png
+new file mode 100644
+index 0000000000..5bde598d2e
+Binary files /dev/null and b/apps/web/public/qq2006/img/MailButton.png differ
+diff --git a/apps/web/public/qq2006/img/MenuButton_Down.png b/apps/web/public/qq2006/img/MenuButton_Down.png
+new file mode 100644
+index 0000000000..f3376b608a
+Binary files /dev/null and b/apps/web/public/qq2006/img/MenuButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/MenuButton_Hover.png b/apps/web/public/qq2006/img/MenuButton_Hover.png
+new file mode 100644
+index 0000000000..c7986f8ffa
+Binary files /dev/null and b/apps/web/public/qq2006/img/MenuButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/MenuButton_Normal.png b/apps/web/public/qq2006/img/MenuButton_Normal.png
+new file mode 100644
+index 0000000000..13310196e4
+Binary files /dev/null and b/apps/web/public/qq2006/img/MenuButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/MinButton_Down.png b/apps/web/public/qq2006/img/MinButton_Down.png
+new file mode 100644
+index 0000000000..e810d73dfc
+Binary files /dev/null and b/apps/web/public/qq2006/img/MinButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/MinButton_Hover.png b/apps/web/public/qq2006/img/MinButton_Hover.png
+new file mode 100644
+index 0000000000..4c6ba85b58
+Binary files /dev/null and b/apps/web/public/qq2006/img/MinButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/MinButton_Normal.png b/apps/web/public/qq2006/img/MinButton_Normal.png
+new file mode 100644
+index 0000000000..6e4427fa7b
+Binary files /dev/null and b/apps/web/public/qq2006/img/MinButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/MobileMsgButton.png b/apps/web/public/qq2006/img/MobileMsgButton.png
+new file mode 100644
+index 0000000000..11413a131f
+Binary files /dev/null and b/apps/web/public/qq2006/img/MobileMsgButton.png differ
+diff --git a/apps/web/public/qq2006/img/MsgManagerButton.png b/apps/web/public/qq2006/img/MsgManagerButton.png
+new file mode 100644
+index 0000000000..faccffc09a
+Binary files /dev/null and b/apps/web/public/qq2006/img/MsgManagerButton.png differ
+diff --git a/apps/web/public/qq2006/img/OpenPet.png b/apps/web/public/qq2006/img/OpenPet.png
+new file mode 100644
+index 0000000000..983179b7c2
+Binary files /dev/null and b/apps/web/public/qq2006/img/OpenPet.png differ
+diff --git a/apps/web/public/qq2006/img/QQHome.png b/apps/web/public/qq2006/img/QQHome.png
+new file mode 100644
+index 0000000000..6650ea1bac
+Binary files /dev/null and b/apps/web/public/qq2006/img/QQHome.png differ
+diff --git a/apps/web/public/qq2006/img/QQMusicButton.png b/apps/web/public/qq2006/img/QQMusicButton.png
+new file mode 100644
+index 0000000000..998febb31a
+Binary files /dev/null and b/apps/web/public/qq2006/img/QQMusicButton.png differ
+diff --git a/apps/web/public/qq2006/img/QQTVButton.png b/apps/web/public/qq2006/img/QQTVButton.png
+new file mode 100644
+index 0000000000..369eb4f668
+Binary files /dev/null and b/apps/web/public/qq2006/img/QQTVButton.png differ
+diff --git a/apps/web/public/qq2006/img/SearchButton.png b/apps/web/public/qq2006/img/SearchButton.png
+new file mode 100644
+index 0000000000..e9b16b6d22
+Binary files /dev/null and b/apps/web/public/qq2006/img/SearchButton.png differ
+diff --git a/apps/web/public/qq2006/img/StatusButton_Down.png b/apps/web/public/qq2006/img/StatusButton_Down.png
+new file mode 100644
+index 0000000000..00f6435e41
+Binary files /dev/null and b/apps/web/public/qq2006/img/StatusButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/StatusButton_Hover.png b/apps/web/public/qq2006/img/StatusButton_Hover.png
+new file mode 100644
+index 0000000000..f9d2fb3f30
+Binary files /dev/null and b/apps/web/public/qq2006/img/StatusButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/StatusButton_Normal.png b/apps/web/public/qq2006/img/StatusButton_Normal.png
+new file mode 100644
+index 0000000000..751f8c5328
+Binary files /dev/null and b/apps/web/public/qq2006/img/StatusButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/TTButton.png b/apps/web/public/qq2006/img/TTButton.png
+new file mode 100644
+index 0000000000..16594c6687
+Binary files /dev/null and b/apps/web/public/qq2006/img/TTButton.png differ
+diff --git a/apps/web/public/qq2006/img/ToolBarBackgroundC.png b/apps/web/public/qq2006/img/ToolBarBackgroundC.png
+new file mode 100644
+index 0000000000..350f53f3d0
+Binary files /dev/null and b/apps/web/public/qq2006/img/ToolBarBackgroundC.png differ
+diff --git a/apps/web/public/qq2006/img/ToolBarBackgroundL.png b/apps/web/public/qq2006/img/ToolBarBackgroundL.png
+new file mode 100644
+index 0000000000..bea21716cf
+Binary files /dev/null and b/apps/web/public/qq2006/img/ToolBarBackgroundL.png differ
+diff --git a/apps/web/public/qq2006/img/ToolBarBackgroundR.png b/apps/web/public/qq2006/img/ToolBarBackgroundR.png
+new file mode 100644
+index 0000000000..a3960f9d4e
+Binary files /dev/null and b/apps/web/public/qq2006/img/ToolBarBackgroundR.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/1.png b/apps/web/public/qq2006/img/avatar/1.png
+new file mode 100644
+index 0000000000..da68e7efaa
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/1.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/10.png b/apps/web/public/qq2006/img/avatar/10.png
+new file mode 100644
+index 0000000000..81ddb66127
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/10.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/100.png b/apps/web/public/qq2006/img/avatar/100.png
+new file mode 100644
+index 0000000000..b417974926
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/100.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/101.png b/apps/web/public/qq2006/img/avatar/101.png
+new file mode 100644
+index 0000000000..d184101f33
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/101.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/102.png b/apps/web/public/qq2006/img/avatar/102.png
+new file mode 100644
+index 0000000000..e11a482474
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/102.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/103.png b/apps/web/public/qq2006/img/avatar/103.png
+new file mode 100644
+index 0000000000..89e17c0bef
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/103.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/104.png b/apps/web/public/qq2006/img/avatar/104.png
+new file mode 100644
+index 0000000000..812a4b8b57
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/104.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/105.png b/apps/web/public/qq2006/img/avatar/105.png
+new file mode 100644
+index 0000000000..1e903757b8
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/105.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/106.png b/apps/web/public/qq2006/img/avatar/106.png
+new file mode 100644
+index 0000000000..baf1effcea
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/106.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/107.png b/apps/web/public/qq2006/img/avatar/107.png
+new file mode 100644
+index 0000000000..cccbd0ba8c
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/107.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/108.png b/apps/web/public/qq2006/img/avatar/108.png
+new file mode 100644
+index 0000000000..34ee912f35
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/108.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/109.png b/apps/web/public/qq2006/img/avatar/109.png
+new file mode 100644
+index 0000000000..e8125ed26e
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/109.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/11.png b/apps/web/public/qq2006/img/avatar/11.png
+new file mode 100644
+index 0000000000..71292626b6
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/11.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/110.png b/apps/web/public/qq2006/img/avatar/110.png
+new file mode 100644
+index 0000000000..bc00f84c97
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/110.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/111.png b/apps/web/public/qq2006/img/avatar/111.png
+new file mode 100644
+index 0000000000..fbf28f4359
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/111.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/112.png b/apps/web/public/qq2006/img/avatar/112.png
+new file mode 100644
+index 0000000000..ab0de17923
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/112.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/113.png b/apps/web/public/qq2006/img/avatar/113.png
+new file mode 100644
+index 0000000000..e53ab1a33d
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/113.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/114.png b/apps/web/public/qq2006/img/avatar/114.png
+new file mode 100644
+index 0000000000..888bb92cc5
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/114.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/115.png b/apps/web/public/qq2006/img/avatar/115.png
+new file mode 100644
+index 0000000000..7574fe1c9f
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/115.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/116.png b/apps/web/public/qq2006/img/avatar/116.png
+new file mode 100644
+index 0000000000..5742c8f319
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/116.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/117.png b/apps/web/public/qq2006/img/avatar/117.png
+new file mode 100644
+index 0000000000..4460c0b749
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/117.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/12.png b/apps/web/public/qq2006/img/avatar/12.png
+new file mode 100644
+index 0000000000..1c34e4d906
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/12.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/13.png b/apps/web/public/qq2006/img/avatar/13.png
+new file mode 100644
+index 0000000000..6127883634
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/13.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/14.png b/apps/web/public/qq2006/img/avatar/14.png
+new file mode 100644
+index 0000000000..1352bee4d5
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/14.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/15.png b/apps/web/public/qq2006/img/avatar/15.png
+new file mode 100644
+index 0000000000..a4ba8cc9e8
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/15.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/16.png b/apps/web/public/qq2006/img/avatar/16.png
+new file mode 100644
+index 0000000000..715ee7c4dc
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/16.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/17.png b/apps/web/public/qq2006/img/avatar/17.png
+new file mode 100644
+index 0000000000..f5b6e6d809
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/17.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/18.png b/apps/web/public/qq2006/img/avatar/18.png
+new file mode 100644
+index 0000000000..54fb9f1fa7
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/18.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/19.png b/apps/web/public/qq2006/img/avatar/19.png
+new file mode 100644
+index 0000000000..84b643aa0f
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/19.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/2.png b/apps/web/public/qq2006/img/avatar/2.png
+new file mode 100644
+index 0000000000..452cbe6687
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/2.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/20.png b/apps/web/public/qq2006/img/avatar/20.png
+new file mode 100644
+index 0000000000..99e2881c4f
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/20.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/21.png b/apps/web/public/qq2006/img/avatar/21.png
+new file mode 100644
+index 0000000000..bf8a379475
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/21.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/22.png b/apps/web/public/qq2006/img/avatar/22.png
+new file mode 100644
+index 0000000000..70efea4997
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/22.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/23.png b/apps/web/public/qq2006/img/avatar/23.png
+new file mode 100644
+index 0000000000..f08e35f94d
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/23.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/24.png b/apps/web/public/qq2006/img/avatar/24.png
+new file mode 100644
+index 0000000000..d9174f0450
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/24.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/25.png b/apps/web/public/qq2006/img/avatar/25.png
+new file mode 100644
+index 0000000000..32a6a5acde
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/25.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/26.png b/apps/web/public/qq2006/img/avatar/26.png
+new file mode 100644
+index 0000000000..14a4a553e5
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/26.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/27.png b/apps/web/public/qq2006/img/avatar/27.png
+new file mode 100644
+index 0000000000..10aa5f789a
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/27.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/28.png b/apps/web/public/qq2006/img/avatar/28.png
+new file mode 100644
+index 0000000000..a35e40fb88
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/28.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/29.png b/apps/web/public/qq2006/img/avatar/29.png
+new file mode 100644
+index 0000000000..9e32507a6b
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/29.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/3.png b/apps/web/public/qq2006/img/avatar/3.png
+new file mode 100644
+index 0000000000..617074d40a
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/3.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/30.png b/apps/web/public/qq2006/img/avatar/30.png
+new file mode 100644
+index 0000000000..d90c0a2231
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/30.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/31.png b/apps/web/public/qq2006/img/avatar/31.png
+new file mode 100644
+index 0000000000..d6070ba6e6
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/31.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/32.png b/apps/web/public/qq2006/img/avatar/32.png
+new file mode 100644
+index 0000000000..9a08139faa
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/32.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/33.png b/apps/web/public/qq2006/img/avatar/33.png
+new file mode 100644
+index 0000000000..70a3fac641
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/33.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/34.png b/apps/web/public/qq2006/img/avatar/34.png
+new file mode 100644
+index 0000000000..9ce2ab9cb5
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/34.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/35.png b/apps/web/public/qq2006/img/avatar/35.png
+new file mode 100644
+index 0000000000..e59021c44d
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/35.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/36.png b/apps/web/public/qq2006/img/avatar/36.png
+new file mode 100644
+index 0000000000..74111f1dfd
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/36.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/37.png b/apps/web/public/qq2006/img/avatar/37.png
+new file mode 100644
+index 0000000000..ef33535856
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/37.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/38.png b/apps/web/public/qq2006/img/avatar/38.png
+new file mode 100644
+index 0000000000..56424a7180
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/38.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/39.png b/apps/web/public/qq2006/img/avatar/39.png
+new file mode 100644
+index 0000000000..b81889f5ff
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/39.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/4.png b/apps/web/public/qq2006/img/avatar/4.png
+new file mode 100644
+index 0000000000..31f028f1db
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/4.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/40.png b/apps/web/public/qq2006/img/avatar/40.png
+new file mode 100644
+index 0000000000..3ea93a8861
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/40.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/41.png b/apps/web/public/qq2006/img/avatar/41.png
+new file mode 100644
+index 0000000000..b50dbbafc2
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/41.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/42.png b/apps/web/public/qq2006/img/avatar/42.png
+new file mode 100644
+index 0000000000..78b93ff20d
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/42.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/43.png b/apps/web/public/qq2006/img/avatar/43.png
+new file mode 100644
+index 0000000000..83ac02f331
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/43.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/44.png b/apps/web/public/qq2006/img/avatar/44.png
+new file mode 100644
+index 0000000000..469b321657
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/44.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/45.png b/apps/web/public/qq2006/img/avatar/45.png
+new file mode 100644
+index 0000000000..59bffb2c12
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/45.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/46.png b/apps/web/public/qq2006/img/avatar/46.png
+new file mode 100644
+index 0000000000..13b817ebca
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/46.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/47.png b/apps/web/public/qq2006/img/avatar/47.png
+new file mode 100644
+index 0000000000..2f0b22878b
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/47.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/48.png b/apps/web/public/qq2006/img/avatar/48.png
+new file mode 100644
+index 0000000000..b1428c659e
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/48.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/49.png b/apps/web/public/qq2006/img/avatar/49.png
+new file mode 100644
+index 0000000000..d521e4e162
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/49.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/5.png b/apps/web/public/qq2006/img/avatar/5.png
+new file mode 100644
+index 0000000000..cd91ef9efc
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/5.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/50.png b/apps/web/public/qq2006/img/avatar/50.png
+new file mode 100644
+index 0000000000..32f30713db
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/50.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/51.png b/apps/web/public/qq2006/img/avatar/51.png
+new file mode 100644
+index 0000000000..3809054e3b
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/51.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/52.png b/apps/web/public/qq2006/img/avatar/52.png
+new file mode 100644
+index 0000000000..19d577b710
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/52.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/53.png b/apps/web/public/qq2006/img/avatar/53.png
+new file mode 100644
+index 0000000000..76594c6837
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/53.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/54.png b/apps/web/public/qq2006/img/avatar/54.png
+new file mode 100644
+index 0000000000..c6060bc2ec
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/54.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/55.png b/apps/web/public/qq2006/img/avatar/55.png
+new file mode 100644
+index 0000000000..8a27188bfa
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/55.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/56.png b/apps/web/public/qq2006/img/avatar/56.png
+new file mode 100644
+index 0000000000..e3939c1667
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/56.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/57.png b/apps/web/public/qq2006/img/avatar/57.png
+new file mode 100644
+index 0000000000..f5b439b8aa
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/57.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/58.png b/apps/web/public/qq2006/img/avatar/58.png
+new file mode 100644
+index 0000000000..c3aab55c65
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/58.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/59.png b/apps/web/public/qq2006/img/avatar/59.png
+new file mode 100644
+index 0000000000..fc5b1c7f3e
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/59.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/6.png b/apps/web/public/qq2006/img/avatar/6.png
+new file mode 100644
+index 0000000000..c7e795e5fe
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/6.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/60.png b/apps/web/public/qq2006/img/avatar/60.png
+new file mode 100644
+index 0000000000..182ede9556
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/60.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/61.png b/apps/web/public/qq2006/img/avatar/61.png
+new file mode 100644
+index 0000000000..8b58f5c79f
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/61.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/62.png b/apps/web/public/qq2006/img/avatar/62.png
+new file mode 100644
+index 0000000000..af5fde1dc4
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/62.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/63.png b/apps/web/public/qq2006/img/avatar/63.png
+new file mode 100644
+index 0000000000..63a6414f1a
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/63.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/64.png b/apps/web/public/qq2006/img/avatar/64.png
+new file mode 100644
+index 0000000000..2705eba8aa
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/64.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/65.png b/apps/web/public/qq2006/img/avatar/65.png
+new file mode 100644
+index 0000000000..7c45520c9c
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/65.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/66.png b/apps/web/public/qq2006/img/avatar/66.png
+new file mode 100644
+index 0000000000..8399b20125
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/66.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/67.png b/apps/web/public/qq2006/img/avatar/67.png
+new file mode 100644
+index 0000000000..b8131176e5
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/67.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/68.png b/apps/web/public/qq2006/img/avatar/68.png
+new file mode 100644
+index 0000000000..1582cb6941
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/68.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/69.png b/apps/web/public/qq2006/img/avatar/69.png
+new file mode 100644
+index 0000000000..4113297384
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/69.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/7.png b/apps/web/public/qq2006/img/avatar/7.png
+new file mode 100644
+index 0000000000..e0d7fc7481
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/7.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/70.png b/apps/web/public/qq2006/img/avatar/70.png
+new file mode 100644
+index 0000000000..063a0f542b
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/70.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/71.png b/apps/web/public/qq2006/img/avatar/71.png
+new file mode 100644
+index 0000000000..b00c1fdaf6
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/71.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/72.png b/apps/web/public/qq2006/img/avatar/72.png
+new file mode 100644
+index 0000000000..e01f99373a
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/72.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/73.png b/apps/web/public/qq2006/img/avatar/73.png
+new file mode 100644
+index 0000000000..18ff9461fa
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/73.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/74.png b/apps/web/public/qq2006/img/avatar/74.png
+new file mode 100644
+index 0000000000..b0f696a7ba
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/74.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/75.png b/apps/web/public/qq2006/img/avatar/75.png
+new file mode 100644
+index 0000000000..fa7afcbdff
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/75.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/76.png b/apps/web/public/qq2006/img/avatar/76.png
+new file mode 100644
+index 0000000000..9e6bfa2211
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/76.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/77.png b/apps/web/public/qq2006/img/avatar/77.png
+new file mode 100644
+index 0000000000..3ecc9af5e7
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/77.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/78.png b/apps/web/public/qq2006/img/avatar/78.png
+new file mode 100644
+index 0000000000..61c7942988
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/78.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/79.png b/apps/web/public/qq2006/img/avatar/79.png
+new file mode 100644
+index 0000000000..132515ffc2
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/79.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/8.png b/apps/web/public/qq2006/img/avatar/8.png
+new file mode 100644
+index 0000000000..b1756528cc
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/8.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/80.png b/apps/web/public/qq2006/img/avatar/80.png
+new file mode 100644
+index 0000000000..a84875a8e9
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/80.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/81.png b/apps/web/public/qq2006/img/avatar/81.png
+new file mode 100644
+index 0000000000..bc543365b4
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/81.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/82.png b/apps/web/public/qq2006/img/avatar/82.png
+new file mode 100644
+index 0000000000..139622b90b
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/82.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/83.png b/apps/web/public/qq2006/img/avatar/83.png
+new file mode 100644
+index 0000000000..df6f74226d
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/83.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/84.png b/apps/web/public/qq2006/img/avatar/84.png
+new file mode 100644
+index 0000000000..402d90f8cf
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/84.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/85.png b/apps/web/public/qq2006/img/avatar/85.png
+new file mode 100644
+index 0000000000..ef068f6c3d
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/85.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/86.png b/apps/web/public/qq2006/img/avatar/86.png
+new file mode 100644
+index 0000000000..6882794efb
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/86.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/87.png b/apps/web/public/qq2006/img/avatar/87.png
+new file mode 100644
+index 0000000000..4e85ba41c7
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/87.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/88.png b/apps/web/public/qq2006/img/avatar/88.png
+new file mode 100644
+index 0000000000..ef213133fc
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/88.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/89.png b/apps/web/public/qq2006/img/avatar/89.png
+new file mode 100644
+index 0000000000..c205335e7c
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/89.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/9.png b/apps/web/public/qq2006/img/avatar/9.png
+new file mode 100644
+index 0000000000..ee9c506a64
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/9.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/90.png b/apps/web/public/qq2006/img/avatar/90.png
+new file mode 100644
+index 0000000000..00d58c3586
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/90.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/91.png b/apps/web/public/qq2006/img/avatar/91.png
+new file mode 100644
+index 0000000000..e11221d0f6
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/91.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/92.png b/apps/web/public/qq2006/img/avatar/92.png
+new file mode 100644
+index 0000000000..de5a19651e
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/92.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/93.png b/apps/web/public/qq2006/img/avatar/93.png
+new file mode 100644
+index 0000000000..ce65d8f880
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/93.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/94.png b/apps/web/public/qq2006/img/avatar/94.png
+new file mode 100644
+index 0000000000..213de56c71
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/94.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/95.png b/apps/web/public/qq2006/img/avatar/95.png
+new file mode 100644
+index 0000000000..6075304867
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/95.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/96.png b/apps/web/public/qq2006/img/avatar/96.png
+new file mode 100644
+index 0000000000..fcd9682d58
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/96.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/97.png b/apps/web/public/qq2006/img/avatar/97.png
+new file mode 100644
+index 0000000000..3ee75c1ec3
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/97.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/98.png b/apps/web/public/qq2006/img/avatar/98.png
+new file mode 100644
+index 0000000000..94a8fd7c71
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/98.png differ
+diff --git a/apps/web/public/qq2006/img/avatar/99.png b/apps/web/public/qq2006/img/avatar/99.png
+new file mode 100644
+index 0000000000..d56c497138
+Binary files /dev/null and b/apps/web/public/qq2006/img/avatar/99.png differ
+diff --git a/apps/web/public/qq2006/img/bg.jpeg b/apps/web/public/qq2006/img/bg.jpeg
+new file mode 100644
+index 0000000000..a5ab8bb284
+Binary files /dev/null and b/apps/web/public/qq2006/img/bg.jpeg differ
+diff --git a/apps/web/public/qq2006/img/dropdown.png b/apps/web/public/qq2006/img/dropdown.png
+new file mode 100644
+index 0000000000..b2c64634bb
+Binary files /dev/null and b/apps/web/public/qq2006/img/dropdown.png differ
+diff --git a/apps/web/public/qq2006/img/dropdown_active.png b/apps/web/public/qq2006/img/dropdown_active.png
+new file mode 100644
+index 0000000000..4bdbb1d760
+Binary files /dev/null and b/apps/web/public/qq2006/img/dropdown_active.png differ
+diff --git a/apps/web/public/qq2006/img/dropdown_disabled.png b/apps/web/public/qq2006/img/dropdown_disabled.png
+new file mode 100644
+index 0000000000..3c5747b4d6
+Binary files /dev/null and b/apps/web/public/qq2006/img/dropdown_disabled.png differ
+diff --git a/apps/web/public/qq2006/img/dropdown_hover.png b/apps/web/public/qq2006/img/dropdown_hover.png
+new file mode 100644
+index 0000000000..77c795b3ba
+Binary files /dev/null and b/apps/web/public/qq2006/img/dropdown_hover.png differ
+diff --git a/apps/web/public/qq2006/img/group_close.png b/apps/web/public/qq2006/img/group_close.png
+new file mode 100644
+index 0000000000..45b3f6033a
+Binary files /dev/null and b/apps/web/public/qq2006/img/group_close.png differ
+diff --git a/apps/web/public/qq2006/img/group_open.png b/apps/web/public/qq2006/img/group_open.png
+new file mode 100644
+index 0000000000..ab23c34c2c
+Binary files /dev/null and b/apps/web/public/qq2006/img/group_open.png differ
+diff --git a/apps/web/public/qq2006/img/im/FontBarBK.png b/apps/web/public/qq2006/img/im/FontBarBK.png
+new file mode 100644
+index 0000000000..b812b66dd7
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/FontBarBK.png differ
+diff --git a/apps/web/public/qq2006/img/im/FontBtnHover.png b/apps/web/public/qq2006/img/im/FontBtnHover.png
+new file mode 100644
+index 0000000000..b8a8eaafd4
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/FontBtnHover.png differ
+diff --git a/apps/web/public/qq2006/img/im/FontBtnNor.png b/apps/web/public/qq2006/img/im/FontBtnNor.png
+new file mode 100644
+index 0000000000..e7cc213f9d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/FontBtnNor.png differ
+diff --git a/apps/web/public/qq2006/img/im/FontBtnOver.png b/apps/web/public/qq2006/img/im/FontBtnOver.png
+new file mode 100644
+index 0000000000..dca063645e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/FontBtnOver.png differ
+diff --git a/apps/web/public/qq2006/img/im/GroupLive32_Disabled.png b/apps/web/public/qq2006/img/im/GroupLive32_Disabled.png
+new file mode 100644
+index 0000000000..93e4327710
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/GroupLive32_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarBackground.png b/apps/web/public/qq2006/img/im/IMBigToolBarBackground.png
+new file mode 100644
+index 0000000000..ffabccb9bc
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarBackground.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarBlackList.png b/apps/web/public/qq2006/img/im/IMBigToolBarBlackList.png
+new file mode 100644
+index 0000000000..2721fcbeca
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarBlackList.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarBlackList_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolBarBlackList_Disabled.png
+new file mode 100644
+index 0000000000..cfff2f9c79
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarBlackList_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarCft.png b/apps/web/public/qq2006/img/im/IMBigToolBarCft.png
+new file mode 100644
+index 0000000000..5119b465b9
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarCft.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarCft_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolBarCft_Disabled.png
+new file mode 100644
+index 0000000000..e509f3138a
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarCft_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarMovie.png b/apps/web/public/qq2006/img/im/IMBigToolBarMovie.png
+new file mode 100644
+index 0000000000..24a5639056
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarMovie.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolBarMovie_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolBarMovie_Disabled.png
+new file mode 100644
+index 0000000000..dcfc9ff4aa
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolBarMovie_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbar3DShow.png b/apps/web/public/qq2006/img/im/IMBigToolbar3DShow.png
+new file mode 100644
+index 0000000000..803a4e9de8
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbar3DShow.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbar3DShow_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbar3DShow_Disabled.png
+new file mode 100644
+index 0000000000..ca9b72b50b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbar3DShow_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarAssistance.png b/apps/web/public/qq2006/img/im/IMBigToolbarAssistance.png
+new file mode 100644
+index 0000000000..eef3e54559
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarAssistance.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarAssistance_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarAssistance_Disabled.png
+new file mode 100644
+index 0000000000..e6b29cc97b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarAssistance_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarGame.png b/apps/web/public/qq2006/img/im/IMBigToolbarGame.png
+new file mode 100644
+index 0000000000..45135b7470
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarGame.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarGroupSpace.png b/apps/web/public/qq2006/img/im/IMBigToolbarGroupSpace.png
+new file mode 100644
+index 0000000000..525d8af4e6
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarGroupSpace.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarGroupmail.png b/apps/web/public/qq2006/img/im/IMBigToolbarGroupmail.png
+new file mode 100644
+index 0000000000..0b0d733e6e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarGroupmail.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarInvite.png b/apps/web/public/qq2006/img/im/IMBigToolbarInvite.png
+new file mode 100644
+index 0000000000..4730fdcec8
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarInvite.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarInvite_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarInvite_Disabled.png
+new file mode 100644
+index 0000000000..63c9e407fe
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarInvite_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarMQQ.png b/apps/web/public/qq2006/img/im/IMBigToolbarMQQ.png
+new file mode 100644
+index 0000000000..bec68c1933
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarMQQ.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarMQQ_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarMQQ_Disabled.png
+new file mode 100644
+index 0000000000..daec3c713a
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarMQQ_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarMusic.png b/apps/web/public/qq2006/img/im/IMBigToolbarMusic.png
+new file mode 100644
+index 0000000000..71b2d921a0
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarMusic.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarMutiAudio.png b/apps/web/public/qq2006/img/im/IMBigToolbarMutiAudio.png
+new file mode 100644
+index 0000000000..27d7e02f18
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarMutiAudio.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarMutiAudio_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarMutiAudio_Disabled.png
+new file mode 100644
+index 0000000000..1395aebff4
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarMutiAudio_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarPet.png b/apps/web/public/qq2006/img/im/IMBigToolbarPet.png
+new file mode 100644
+index 0000000000..a7530f97b0
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarPet.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarPet_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarPet_Disabled.png
+new file mode 100644
+index 0000000000..f8fa8fcb4d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarPet_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarPlay.png b/apps/web/public/qq2006/img/im/IMBigToolbarPlay.png
+new file mode 100644
+index 0000000000..45135b7470
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarPlay.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarPlay_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarPlay_Disabled.png
+new file mode 100644
+index 0000000000..55815f9d0d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarPlay_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarQQLive.png b/apps/web/public/qq2006/img/im/IMBigToolbarQQLive.png
+new file mode 100644
+index 0000000000..42f6c86e22
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarQQLive.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarQQSQQ.png b/apps/web/public/qq2006/img/im/IMBigToolbarQQSQQ.png
+new file mode 100644
+index 0000000000..0f344533ca
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarQQSQQ.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarQQSQQ_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarQQSQQ_Disabled.png
+new file mode 100644
+index 0000000000..7ac3e44c47
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarQQSQQ_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarRing.png b/apps/web/public/qq2006/img/im/IMBigToolbarRing.png
+new file mode 100644
+index 0000000000..c590e13081
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarRing.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarRing_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarRing_Disabled.png
+new file mode 100644
+index 0000000000..640955342a
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarRing_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarSendFile.png b/apps/web/public/qq2006/img/im/IMBigToolbarSendFile.png
+new file mode 100644
+index 0000000000..d857c10831
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarSendFile.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarSendFile_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarSendFile_Disabled.png
+new file mode 100644
+index 0000000000..a319dcd411
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarSendFile_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarSendRing.png b/apps/web/public/qq2006/img/im/IMBigToolbarSendRing.png
+new file mode 100644
+index 0000000000..f269f5d264
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarSendRing.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarSendRing_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarSendRing_Disabled.png
+new file mode 100644
+index 0000000000..4a65197bd3
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarSendRing_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarShare.png b/apps/web/public/qq2006/img/im/IMBigToolbarShare.png
+new file mode 100644
+index 0000000000..f243029078
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarShare.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarShare_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarShare_Disabled.png
+new file mode 100644
+index 0000000000..b96ce7a3aa
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarShare_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarVQQ.png b/apps/web/public/qq2006/img/im/IMBigToolbarVQQ.png
+new file mode 100644
+index 0000000000..6b12b032e9
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarVQQ.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarVideo.png b/apps/web/public/qq2006/img/im/IMBigToolbarVideo.png
+new file mode 100644
+index 0000000000..c03576fb46
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarVideo.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarVideo_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarVideo_Disabled.png
+new file mode 100644
+index 0000000000..0709ed7fc2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarVideo_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarWindow.png b/apps/web/public/qq2006/img/im/IMBigToolbarWindow.png
+new file mode 100644
+index 0000000000..9237c01383
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarWindow.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBigToolbarWindow_Disabled.png b/apps/web/public/qq2006/img/im/IMBigToolbarWindow_Disabled.png
+new file mode 100644
+index 0000000000..05663549c2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBigToolbarWindow_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderBottom.png b/apps/web/public/qq2006/img/im/IMBorderBottom.png
+new file mode 100644
+index 0000000000..3f4b0be8c8
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderBottom.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderBottom2.png b/apps/web/public/qq2006/img/im/IMBorderBottom2.png
+new file mode 100644
+index 0000000000..8211e5d028
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderBottom2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderLeft.png b/apps/web/public/qq2006/img/im/IMBorderLeft.png
+new file mode 100644
+index 0000000000..4f4b2204f9
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderLeft.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderLeft2.png b/apps/web/public/qq2006/img/im/IMBorderLeft2.png
+new file mode 100644
+index 0000000000..51c56c2479
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderLeft2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderLeftBottom2.png b/apps/web/public/qq2006/img/im/IMBorderLeftBottom2.png
+new file mode 100644
+index 0000000000..9ac8e34b90
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderLeftBottom2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderLeftTop2.png b/apps/web/public/qq2006/img/im/IMBorderLeftTop2.png
+new file mode 100644
+index 0000000000..28e1083502
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderLeftTop2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderRight.png b/apps/web/public/qq2006/img/im/IMBorderRight.png
+new file mode 100644
+index 0000000000..a4aa7eb6c2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderRight.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderRight2.png b/apps/web/public/qq2006/img/im/IMBorderRight2.png
+new file mode 100644
+index 0000000000..755ca9ac1d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderRight2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderRightBottom2.png b/apps/web/public/qq2006/img/im/IMBorderRightBottom2.png
+new file mode 100644
+index 0000000000..ab6fcc0f39
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderRightBottom2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderRightTop2.png b/apps/web/public/qq2006/img/im/IMBorderRightTop2.png
+new file mode 100644
+index 0000000000..87e4cc4d26
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderRightTop2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderTop.png b/apps/web/public/qq2006/img/im/IMBorderTop.png
+new file mode 100644
+index 0000000000..79b21144ee
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderTop.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMBorderTop2.png b/apps/web/public/qq2006/img/im/IMBorderTop2.png
+new file mode 100644
+index 0000000000..abac47dc03
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMBorderTop2.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMButton_Default.png b/apps/web/public/qq2006/img/im/IMButton_Default.png
+new file mode 100644
+index 0000000000..4a331131b2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMButton_Default.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMButton_Down.png b/apps/web/public/qq2006/img/im/IMButton_Down.png
+new file mode 100644
+index 0000000000..1428b1915d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMButton_Hover.png b/apps/web/public/qq2006/img/im/IMButton_Hover.png
+new file mode 100644
+index 0000000000..5e400b291c
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMButton_Normal.png b/apps/web/public/qq2006/img/im/IMButton_Normal.png
+new file mode 100644
+index 0000000000..a6157a2d70
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMCloseButton_Down.png b/apps/web/public/qq2006/img/im/IMCloseButton_Down.png
+new file mode 100644
+index 0000000000..942c85cf50
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMCloseButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMCloseButton_Hover.png b/apps/web/public/qq2006/img/im/IMCloseButton_Hover.png
+new file mode 100644
+index 0000000000..38ebcf3034
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMCloseButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMCloseButton_Normal.png b/apps/web/public/qq2006/img/im/IMCloseButton_Normal.png
+new file mode 100644
+index 0000000000..d1959e7d9a
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMCloseButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMFriendInfoBackground.png b/apps/web/public/qq2006/img/im/IMFriendInfoBackground.png
+new file mode 100644
+index 0000000000..c14c588a72
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMFriendInfoBackground.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMFriendInfoBackground_big.png b/apps/web/public/qq2006/img/im/IMFriendInfoBackground_big.png
+new file mode 100644
+index 0000000000..563e3ab573
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMFriendInfoBackground_big.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMMaxButton_Down.png b/apps/web/public/qq2006/img/im/IMMaxButton_Down.png
+new file mode 100644
+index 0000000000..eb404a7c54
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMMaxButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMMaxButton_Hover.png b/apps/web/public/qq2006/img/im/IMMaxButton_Hover.png
+new file mode 100644
+index 0000000000..3b5f07d0d3
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMMaxButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMMaxButton_Normal.png b/apps/web/public/qq2006/img/im/IMMaxButton_Normal.png
+new file mode 100644
+index 0000000000..71771f7224
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMMaxButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMMinButton_Down.png b/apps/web/public/qq2006/img/im/IMMinButton_Down.png
+new file mode 100644
+index 0000000000..e810d73dfc
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMMinButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMMinButton_Hover.png b/apps/web/public/qq2006/img/im/IMMinButton_Hover.png
+new file mode 100644
+index 0000000000..4c6ba85b58
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMMinButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMMinButton_Normal.png b/apps/web/public/qq2006/img/im/IMMinButton_Normal.png
+new file mode 100644
+index 0000000000..6e4427fa7b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMMinButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMRestoreButton_Down.png b/apps/web/public/qq2006/img/im/IMRestoreButton_Down.png
+new file mode 100644
+index 0000000000..bf34a82c35
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMRestoreButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMRestoreButton_Hover.png b/apps/web/public/qq2006/img/im/IMRestoreButton_Hover.png
+new file mode 100644
+index 0000000000..4a908cbfed
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMRestoreButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMRestoreButton_Normal.png b/apps/web/public/qq2006/img/im/IMRestoreButton_Normal.png
+new file mode 100644
+index 0000000000..601f4315e2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMRestoreButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Down.png b/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Down.png
+new file mode 100644
+index 0000000000..cf0242ff7b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Hover.png b/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Hover.png
+new file mode 100644
+index 0000000000..ef6716e2db
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Normal.png b/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Normal.png
+new file mode 100644
+index 0000000000..0d967bb20c
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarButtonExpand_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarButton_Down.png b/apps/web/public/qq2006/img/im/IMSidebarButton_Down.png
+new file mode 100644
+index 0000000000..b38d93d19b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarButton_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarButton_Hover.png b/apps/web/public/qq2006/img/im/IMSidebarButton_Hover.png
+new file mode 100644
+index 0000000000..fcc234a4d2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarButton_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarButton_Normal.png b/apps/web/public/qq2006/img/im/IMSidebarButton_Normal.png
+new file mode 100644
+index 0000000000..bd07c08cc1
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarButton_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarMenu_Down.png b/apps/web/public/qq2006/img/im/IMSidebarMenu_Down.png
+new file mode 100644
+index 0000000000..2710426dbd
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarMenu_Down.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarMenu_Hover.png b/apps/web/public/qq2006/img/im/IMSidebarMenu_Hover.png
+new file mode 100644
+index 0000000000..61e8aa2a37
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarMenu_Hover.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSidebarMenu_Normal.png b/apps/web/public/qq2006/img/im/IMSidebarMenu_Normal.png
+new file mode 100644
+index 0000000000..76d4e381cc
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSidebarMenu_Normal.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarAction.png b/apps/web/public/qq2006/img/im/IMSmallToolbarAction.png
+new file mode 100644
+index 0000000000..4256b6eb6c
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarAction.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarBackground.png b/apps/web/public/qq2006/img/im/IMSmallToolbarBackground.png
+new file mode 100644
+index 0000000000..b7c3f7b5de
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarBackground.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarCatch.png b/apps/web/public/qq2006/img/im/IMSmallToolbarCatch.png
+new file mode 100644
+index 0000000000..1b5bc0834c
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarCatch.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarCatch_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarCatch_Disabled.png
+new file mode 100644
+index 0000000000..aea14a30e7
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarCatch_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarFace.png b/apps/web/public/qq2006/img/im/IMSmallToolbarFace.png
+new file mode 100644
+index 0000000000..943c2d0514
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarFace.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarFace_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarFace_Disabled.png
+new file mode 100644
+index 0000000000..5c169f5b0e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarFace_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarFont.png b/apps/web/public/qq2006/img/im/IMSmallToolbarFont.png
+new file mode 100644
+index 0000000000..724529449e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarFont.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarFont_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarFont_Disabled.png
+new file mode 100644
+index 0000000000..82a68491e4
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarFont_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarGroup.png b/apps/web/public/qq2006/img/im/IMSmallToolbarGroup.png
+new file mode 100644
+index 0000000000..765f2654c7
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarGroup.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarOtherContent.png b/apps/web/public/qq2006/img/im/IMSmallToolbarOtherContent.png
+new file mode 100644
+index 0000000000..6643a6f777
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarOtherContent.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarOtherContent_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarOtherContent_Disabled.png
+new file mode 100644
+index 0000000000..9b48fd1099
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarOtherContent_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarPicForbid.png b/apps/web/public/qq2006/img/im/IMSmallToolbarPicForbid.png
+new file mode 100644
+index 0000000000..e35f9e050b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarPicForbid.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarPicture.png b/apps/web/public/qq2006/img/im/IMSmallToolbarPicture.png
+new file mode 100644
+index 0000000000..9e14c570d1
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarPicture.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarPicture_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarPicture_Disabled.png
+new file mode 100644
+index 0000000000..fc175c8572
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarPicture_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarPtt.png b/apps/web/public/qq2006/img/im/IMSmallToolbarPtt.png
+new file mode 100644
+index 0000000000..d26732a633
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarPtt.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarPtt_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarPtt_Disabled.png
+new file mode 100644
+index 0000000000..26dc088508
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarPtt_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarQRing.png b/apps/web/public/qq2006/img/im/IMSmallToolbarQRing.png
+new file mode 100644
+index 0000000000..842c65392e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarQRing.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarQuick.png b/apps/web/public/qq2006/img/im/IMSmallToolbarQuick.png
+new file mode 100644
+index 0000000000..9ad49ecd0e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarQuick.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarScene.png b/apps/web/public/qq2006/img/im/IMSmallToolbarScene.png
+new file mode 100644
+index 0000000000..bbff54672f
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarScene.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarScene_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarScene_Disabled.png
+new file mode 100644
+index 0000000000..e370007ded
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarScene_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarSearch.png b/apps/web/public/qq2006/img/im/IMSmallToolbarSearch.png
+new file mode 100644
+index 0000000000..3b619ed476
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarSearch.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarSuperbag.png b/apps/web/public/qq2006/img/im/IMSmallToolbarSuperbag.png
+new file mode 100644
+index 0000000000..75f58f5975
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarSuperbag.png differ
+diff --git a/apps/web/public/qq2006/img/im/IMSmallToolbarSuperbag_Disabled.png b/apps/web/public/qq2006/img/im/IMSmallToolbarSuperbag_Disabled.png
+new file mode 100644
+index 0000000000..36d6c44cf2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/IMSmallToolbarSuperbag_Disabled.png differ
+diff --git a/apps/web/public/qq2006/img/im/Italic.png b/apps/web/public/qq2006/img/im/Italic.png
+new file mode 100644
+index 0000000000..1bc4af6285
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/Italic.png differ
+diff --git a/apps/web/public/qq2006/img/im/QQLive_BBS_32_32.png b/apps/web/public/qq2006/img/im/QQLive_BBS_32_32.png
+new file mode 100644
+index 0000000000..03137e99c1
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QQLive_BBS_32_32.png differ
+diff --git a/apps/web/public/qq2006/img/im/QQLive_fresh_32_32.png b/apps/web/public/qq2006/img/im/QQLive_fresh_32_32.png
+new file mode 100644
+index 0000000000..d54012c538
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QQLive_fresh_32_32.png differ
+diff --git a/apps/web/public/qq2006/img/im/QQLive_vote_32_32.png b/apps/web/public/qq2006/img/im/QQLive_vote_32_32.png
+new file mode 100644
+index 0000000000..156f23f86d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QQLive_vote_32_32.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgAddFriend.png b/apps/web/public/qq2006/img/im/QZoneDlgAddFriend.png
+new file mode 100644
+index 0000000000..bdb024b0b8
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgAddFriend.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgBack.png b/apps/web/public/qq2006/img/im/QZoneDlgBack.png
+new file mode 100644
+index 0000000000..5f6cf56179
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgBack.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgBackDisable.png b/apps/web/public/qq2006/img/im/QZoneDlgBackDisable.png
+new file mode 100644
+index 0000000000..0fa8fcb694
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgBackDisable.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgCommend.png b/apps/web/public/qq2006/img/im/QZoneDlgCommend.png
+new file mode 100644
+index 0000000000..a51ee3e310
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgCommend.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgFavorites.png b/apps/web/public/qq2006/img/im/QZoneDlgFavorites.png
+new file mode 100644
+index 0000000000..da6e5e6c11
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgFavorites.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgForward.png b/apps/web/public/qq2006/img/im/QZoneDlgForward.png
+new file mode 100644
+index 0000000000..53a7277d0f
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgForward.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgForwardDisable.png b/apps/web/public/qq2006/img/im/QZoneDlgForwardDisable.png
+new file mode 100644
+index 0000000000..4bcf293451
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgForwardDisable.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgHomePage.png b/apps/web/public/qq2006/img/im/QZoneDlgHomePage.png
+new file mode 100644
+index 0000000000..af84db9037
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgHomePage.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgInfo.png b/apps/web/public/qq2006/img/im/QZoneDlgInfo.png
+new file mode 100644
+index 0000000000..628ecc1914
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgInfo.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgMarket.png b/apps/web/public/qq2006/img/im/QZoneDlgMarket.png
+new file mode 100644
+index 0000000000..8343303588
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgMarket.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgMyHome.png b/apps/web/public/qq2006/img/im/QZoneDlgMyHome.png
+new file mode 100644
+index 0000000000..6b1e7f9046
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgMyHome.png differ
+diff --git a/apps/web/public/qq2006/img/im/QZoneDlgRefresh.png b/apps/web/public/qq2006/img/im/QZoneDlgRefresh.png
+new file mode 100644
+index 0000000000..51171382e4
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/QZoneDlgRefresh.png differ
+diff --git a/apps/web/public/qq2006/img/im/Send_Love.png b/apps/web/public/qq2006/img/im/Send_Love.png
+new file mode 100644
+index 0000000000..4d4b028772
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/Send_Love.png differ
+diff --git a/apps/web/public/qq2006/img/im/SessionDlgBoring.png b/apps/web/public/qq2006/img/im/SessionDlgBoring.png
+new file mode 100644
+index 0000000000..93a851a9f2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/SessionDlgBoring.png differ
+diff --git a/apps/web/public/qq2006/img/im/SessionDlgFriend.png b/apps/web/public/qq2006/img/im/SessionDlgFriend.png
+new file mode 100644
+index 0000000000..58dc77e564
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/SessionDlgFriend.png differ
+diff --git a/apps/web/public/qq2006/img/im/SessionDlgMsgMode.png b/apps/web/public/qq2006/img/im/SessionDlgMsgMode.png
+new file mode 100644
+index 0000000000..f5d49ef22d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/SessionDlgMsgMode.png differ
+diff --git a/apps/web/public/qq2006/img/im/UserInfoTitle.png b/apps/web/public/qq2006/img/im/UserInfoTitle.png
+new file mode 100644
+index 0000000000..576a72629a
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/UserInfoTitle.png differ
+diff --git a/apps/web/public/qq2006/img/im/Window.png b/apps/web/public/qq2006/img/im/Window.png
+new file mode 100644
+index 0000000000..5c4e7d221f
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/Window.png differ
+diff --git a/apps/web/public/qq2006/img/im/bold.png b/apps/web/public/qq2006/img/im/bold.png
+new file mode 100644
+index 0000000000..96be084e6b
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/bold.png differ
+diff --git a/apps/web/public/qq2006/img/im/color.png b/apps/web/public/qq2006/img/im/color.png
+new file mode 100644
+index 0000000000..84ea835d68
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/color.png differ
+diff --git a/apps/web/public/qq2006/img/im/groupmanage.png b/apps/web/public/qq2006/img/im/groupmanage.png
+new file mode 100644
+index 0000000000..4235dae2a3
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/groupmanage.png differ
+diff --git a/apps/web/public/qq2006/img/im/icon.png b/apps/web/public/qq2006/img/im/icon.png
+new file mode 100644
+index 0000000000..c4eb63fb29
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/icon.png differ
+diff --git a/apps/web/public/qq2006/img/im/menuBarBk.png b/apps/web/public/qq2006/img/im/menuBarBk.png
+new file mode 100644
+index 0000000000..cb02c1476e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/menuBarBk.png differ
+diff --git a/apps/web/public/qq2006/img/im/menuBarCheck.png b/apps/web/public/qq2006/img/im/menuBarCheck.png
+new file mode 100644
+index 0000000000..2b00547de8
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/menuBarCheck.png differ
+diff --git a/apps/web/public/qq2006/img/im/menuBarLeft.png b/apps/web/public/qq2006/img/im/menuBarLeft.png
+new file mode 100644
+index 0000000000..e1b0dcb3cf
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/menuBarLeft.png differ
+diff --git a/apps/web/public/qq2006/img/im/menuBarRight.png b/apps/web/public/qq2006/img/im/menuBarRight.png
+new file mode 100644
+index 0000000000..0dee76a942
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/menuBarRight.png differ
+diff --git a/apps/web/public/qq2006/img/im/menuButBk.png b/apps/web/public/qq2006/img/im/menuButBk.png
+new file mode 100644
+index 0000000000..cb02c1476e
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/menuButBk.png differ
+diff --git a/apps/web/public/qq2006/img/im/show1.gif b/apps/web/public/qq2006/img/im/show1.gif
+new file mode 100644
+index 0000000000..69e5cc6745
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/show1.gif differ
+diff --git a/apps/web/public/qq2006/img/im/show3.gif b/apps/web/public/qq2006/img/im/show3.gif
+new file mode 100644
+index 0000000000..4ba592d55d
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/show3.gif differ
+diff --git a/apps/web/public/qq2006/img/im/statusbar_spinbutton.png b/apps/web/public/qq2006/img/im/statusbar_spinbutton.png
+new file mode 100644
+index 0000000000..48811402b3
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/statusbar_spinbutton.png differ
+diff --git a/apps/web/public/qq2006/img/im/tabBK.png b/apps/web/public/qq2006/img/im/tabBK.png
+new file mode 100644
+index 0000000000..7971532aa4
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/tabBK.png differ
+diff --git a/apps/web/public/qq2006/img/im/tabBKAni.png b/apps/web/public/qq2006/img/im/tabBKAni.png
+new file mode 100644
+index 0000000000..f30d30a2b9
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/tabBKAni.png differ
+diff --git a/apps/web/public/qq2006/img/im/tabNormal.png b/apps/web/public/qq2006/img/im/tabNormal.png
+new file mode 100644
+index 0000000000..a0657a84c2
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/tabNormal.png differ
+diff --git a/apps/web/public/qq2006/img/im/tabPressed.png b/apps/web/public/qq2006/img/im/tabPressed.png
+new file mode 100644
+index 0000000000..0cd2a0f164
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/tabPressed.png differ
+diff --git a/apps/web/public/qq2006/img/im/tabsel.png b/apps/web/public/qq2006/img/im/tabsel.png
+new file mode 100644
+index 0000000000..b23e1624b6
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/tabsel.png differ
+diff --git a/apps/web/public/qq2006/img/im/tabunsel.png b/apps/web/public/qq2006/img/im/tabunsel.png
+new file mode 100644
+index 0000000000..4341a2f518
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/tabunsel.png differ
+diff --git a/apps/web/public/qq2006/img/im/toolbarBK.png b/apps/web/public/qq2006/img/im/toolbarBK.png
+new file mode 100644
+index 0000000000..ddc919d1a3
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/toolbarBK.png differ
+diff --git a/apps/web/public/qq2006/img/im/underline.png b/apps/web/public/qq2006/img/im/underline.png
+new file mode 100644
+index 0000000000..a097b76a13
+Binary files /dev/null and b/apps/web/public/qq2006/img/im/underline.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1710_1.png b/apps/web/public/qq2006/img/logging/BITMAP1710_1.png
+new file mode 100644
+index 0000000000..dc6dd42dcc
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1710_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1733_1.png b/apps/web/public/qq2006/img/logging/BITMAP1733_1.png
+new file mode 100644
+index 0000000000..6b0d66e19b
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1733_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1734_1.png b/apps/web/public/qq2006/img/logging/BITMAP1734_1.png
+new file mode 100644
+index 0000000000..dd1ebcd588
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1734_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1735_1.png b/apps/web/public/qq2006/img/logging/BITMAP1735_1.png
+new file mode 100644
+index 0000000000..aa7717460e
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1735_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1736_1.png b/apps/web/public/qq2006/img/logging/BITMAP1736_1.png
+new file mode 100644
+index 0000000000..b6097ae2dc
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1736_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1737_1.png b/apps/web/public/qq2006/img/logging/BITMAP1737_1.png
+new file mode 100644
+index 0000000000..5a0e0c960b
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1737_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1738_1.png b/apps/web/public/qq2006/img/logging/BITMAP1738_1.png
+new file mode 100644
+index 0000000000..597c7fa6a9
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1738_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1739_1.png b/apps/web/public/qq2006/img/logging/BITMAP1739_1.png
+new file mode 100644
+index 0000000000..bd93566e0c
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1739_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1740_1.png b/apps/web/public/qq2006/img/logging/BITMAP1740_1.png
+new file mode 100644
+index 0000000000..a276fc4d78
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1740_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1741_1.png b/apps/web/public/qq2006/img/logging/BITMAP1741_1.png
+new file mode 100644
+index 0000000000..e94f9de1cf
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1741_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1742_1.png b/apps/web/public/qq2006/img/logging/BITMAP1742_1.png
+new file mode 100644
+index 0000000000..706fbdc8a5
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1742_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1743_1.png b/apps/web/public/qq2006/img/logging/BITMAP1743_1.png
+new file mode 100644
+index 0000000000..5d6c82ad90
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1743_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/BITMAP1744_1.png b/apps/web/public/qq2006/img/logging/BITMAP1744_1.png
+new file mode 100644
+index 0000000000..c42d8d1e5f
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/BITMAP1744_1.png differ
+diff --git a/apps/web/public/qq2006/img/logging/START_GIF1704_1.gif b/apps/web/public/qq2006/img/logging/START_GIF1704_1.gif
+new file mode 100644
+index 0000000000..25bd1e912a
+Binary files /dev/null and b/apps/web/public/qq2006/img/logging/START_GIF1704_1.gif differ
+diff --git a/apps/web/public/qq2006/img/login_banner.png b/apps/web/public/qq2006/img/login_banner.png
+new file mode 100644
+index 0000000000..1e00a0267a
+Binary files /dev/null and b/apps/web/public/qq2006/img/login_banner.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_Card.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_Card.png
+new file mode 100644
+index 0000000000..449347a3ce
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_Card.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_Game.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_Game.png
+new file mode 100644
+index 0000000000..4d2dc2e7ba
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_Game.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_GroupSend.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_GroupSend.png
+new file mode 100644
+index 0000000000..cb9c125458
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_GroupSend.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_Info.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_Info.png
+new file mode 100644
+index 0000000000..460d6ddb08
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_Info.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_MediaRing.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_MediaRing.png
+new file mode 100644
+index 0000000000..ced1c7060f
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_MediaRing.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_MobileQQ.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_MobileQQ.png
+new file mode 100644
+index 0000000000..e64491e4ca
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_MobileQQ.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_PhoneRing.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_PhoneRing.png
+new file mode 100644
+index 0000000000..6d3684d525
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_PhoneRing.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_Picture.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_Picture.png
+new file mode 100644
+index 0000000000..c748e66517
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_Picture.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_QQEye.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_QQEye.png
+new file mode 100644
+index 0000000000..964bffa1d8
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_QQEye.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_QQWEB.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_QQWEB.png
+new file mode 100644
+index 0000000000..46cfd981ec
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_QQWEB.png differ
+diff --git a/apps/web/public/qq2006/img/mms-bar/MMSBar_SendSet.png b/apps/web/public/qq2006/img/mms-bar/MMSBar_SendSet.png
+new file mode 100644
+index 0000000000..655c2b7506
+Binary files /dev/null and b/apps/web/public/qq2006/img/mms-bar/MMSBar_SendSet.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/BlankPanel.png b/apps/web/public/qq2006/img/panel-bar/BlankPanel.png
+new file mode 100644
+index 0000000000..329d633456
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/BlankPanel.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/ContentsButton.png b/apps/web/public/qq2006/img/panel-bar/ContentsButton.png
+new file mode 100644
+index 0000000000..bd158dd2b6
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/ContentsButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/CustomButton.png b/apps/web/public/qq2006/img/panel-bar/CustomButton.png
+new file mode 100644
+index 0000000000..9b18e9c2ab
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/CustomButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/EaseButton.png b/apps/web/public/qq2006/img/panel-bar/EaseButton.png
+new file mode 100644
+index 0000000000..2fd68bd128
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/EaseButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/FriendButton.png b/apps/web/public/qq2006/img/panel-bar/FriendButton.png
+new file mode 100644
+index 0000000000..9dba7a5a3c
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/FriendButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/IntegratePanel.png b/apps/web/public/qq2006/img/panel-bar/IntegratePanel.png
+new file mode 100644
+index 0000000000..fbfda3ce8c
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/IntegratePanel.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/MobileButton.png b/apps/web/public/qq2006/img/panel-bar/MobileButton.png
+new file mode 100644
+index 0000000000..e446153279
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/MobileButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/NetDiskButton.png b/apps/web/public/qq2006/img/panel-bar/NetDiskButton.png
+new file mode 100644
+index 0000000000..a0a4480641
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/NetDiskButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/RtxButton.png b/apps/web/public/qq2006/img/panel-bar/RtxButton.png
+new file mode 100644
+index 0000000000..c4cc44971a
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/RtxButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/SBuddyButton.png b/apps/web/public/qq2006/img/panel-bar/SBuddyButton.png
+new file mode 100644
+index 0000000000..d249e4ead1
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/SBuddyButton.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/barback2_normal.png b/apps/web/public/qq2006/img/panel-bar/barback2_normal.png
+new file mode 100644
+index 0000000000..7a80c9be03
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/barback2_normal.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/barback2_over.png b/apps/web/public/qq2006/img/panel-bar/barback2_over.png
+new file mode 100644
+index 0000000000..0de00e5c77
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/barback2_over.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/barback_disabled.png b/apps/web/public/qq2006/img/panel-bar/barback_disabled.png
+new file mode 100644
+index 0000000000..728e4217d1
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/barback_disabled.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/barback_normal.png b/apps/web/public/qq2006/img/panel-bar/barback_normal.png
+new file mode 100644
+index 0000000000..f4df7f709e
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/barback_normal.png differ
+diff --git a/apps/web/public/qq2006/img/panel-bar/barback_over.png b/apps/web/public/qq2006/img/panel-bar/barback_over.png
+new file mode 100644
+index 0000000000..223847b170
+Binary files /dev/null and b/apps/web/public/qq2006/img/panel-bar/barback_over.png differ
+diff --git a/apps/web/public/qq2006/img/payment.png b/apps/web/public/qq2006/img/payment.png
+new file mode 100644
+index 0000000000..c463510dc1
+Binary files /dev/null and b/apps/web/public/qq2006/img/payment.png differ
+diff --git a/apps/web/public/qq2006/img/qq.png b/apps/web/public/qq2006/img/qq.png
+new file mode 100644
+index 0000000000..cdfb501987
+Binary files /dev/null and b/apps/web/public/qq2006/img/qq.png differ
+diff --git a/apps/web/public/qq2006/img/security_normal.png b/apps/web/public/qq2006/img/security_normal.png
+new file mode 100644
+index 0000000000..fd36e74115
+Binary files /dev/null and b/apps/web/public/qq2006/img/security_normal.png differ
+diff --git a/apps/web/public/qq2006/img/select.png b/apps/web/public/qq2006/img/select.png
+new file mode 100644
+index 0000000000..ada9b6de34
+Binary files /dev/null and b/apps/web/public/qq2006/img/select.png differ
+diff --git a/apps/web/public/qq2006/sound/Global.mp3 b/apps/web/public/qq2006/sound/Global.mp3
+new file mode 100644
+index 0000000000..163215e779
+Binary files /dev/null and b/apps/web/public/qq2006/sound/Global.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/InputAlert.mp3 b/apps/web/public/qq2006/sound/InputAlert.mp3
+new file mode 100644
+index 0000000000..171d33d59b
+Binary files /dev/null and b/apps/web/public/qq2006/sound/InputAlert.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/call.mp3 b/apps/web/public/qq2006/sound/call.mp3
+new file mode 100644
+index 0000000000..04a9725017
+Binary files /dev/null and b/apps/web/public/qq2006/sound/call.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/folder.mp3 b/apps/web/public/qq2006/sound/folder.mp3
+new file mode 100644
+index 0000000000..43ecbf1db9
+Binary files /dev/null and b/apps/web/public/qq2006/sound/folder.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/msg.mp3 b/apps/web/public/qq2006/sound/msg.mp3
+new file mode 100644
+index 0000000000..2af5c89957
+Binary files /dev/null and b/apps/web/public/qq2006/sound/msg.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/ring.mp3 b/apps/web/public/qq2006/sound/ring.mp3
+new file mode 100644
+index 0000000000..9d20ac4925
+Binary files /dev/null and b/apps/web/public/qq2006/sound/ring.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/security.mp3 b/apps/web/public/qq2006/sound/security.mp3
+new file mode 100644
+index 0000000000..eacbafecc8
+Binary files /dev/null and b/apps/web/public/qq2006/sound/security.mp3 differ
+diff --git a/apps/web/public/qq2006/sound/system.mp3 b/apps/web/public/qq2006/sound/system.mp3
+new file mode 100644
+index 0000000000..2bed50e48a
+Binary files /dev/null and b/apps/web/public/qq2006/sound/system.mp3 differ
 diff --git a/packages/bundle/web-app/cordis.patch.yml b/packages/bundle/web-app/cordis.patch.yml
 index b06e63b54f..670758a899 100644
 --- a/packages/bundle/web-app/cordis.patch.yml
@@ -1323,10 +2800,10 @@ index 21259146a7..1c7aa12027 100644
  
  /**
 diff --git a/packages/client/ui-conversation/src/client/locales.ts b/packages/client/ui-conversation/src/client/locales.ts
-index c9b6f658ca..35d62e3db1 100644
+index c9b6f658ca..15285d7722 100644
 --- a/packages/client/ui-conversation/src/client/locales.ts
 +++ b/packages/client/ui-conversation/src/client/locales.ts
-@@ -172,6 +172,110 @@ export const zh = {
+@@ -172,6 +172,114 @@ export const zh = {
    'json.truncated': '… 已截断，共 {total} 字符',
    'clock.md': '{m}月{d}日',
    'clock.ymd': '{y}年{m}月{d}日',
@@ -1426,6 +2903,10 @@ index c9b6f658ca..35d62e3db1 100644
 +  'qq.side.albumSuffix': '张/',
 +  'qq.side.favoriteSuffix': '个',
 +  'qq.side.commentsLabel': '评论',
++  'qq.side.collapse': '收起侧栏',
++  'qq.side.expand': '展开侧栏',
++  'qq.side.collapsed': '已收起侧栏',
++  'qq.side.expanded': '已展开侧栏',
 +  'qq.msg.copy': '复制',
 +  'qq.msg.me': '我',
 +  'qq.msg.quote': '引用',
@@ -1437,7 +2918,7 @@ index c9b6f658ca..35d62e3db1 100644
  } satisfies Record<string, string>
  
  /** The conversation namespace key union. */
-@@ -341,4 +445,111 @@ export const en = {
+@@ -341,4 +449,115 @@ export const en = {
    'json.truncated': '… truncated, {total} characters total',
    'clock.md': '{m}/{d}',
    'clock.ymd': '{y}-{m}-{d}',
@@ -1540,6 +3021,10 @@ index c9b6f658ca..35d62e3db1 100644
 +  'qq.side.albumSuffix': '张/',
 +  'qq.side.favoriteSuffix': '个',
 +  'qq.side.commentsLabel': '评论',
++  'qq.side.collapse': '收起侧栏',
++  'qq.side.expand': '展开侧栏',
++  'qq.side.collapsed': '已收起侧栏',
++  'qq.side.expanded': '已展开侧栏',
 +  'qq.msg.copy': '复制',
 +  'qq.msg.me': '我',
 +  'qq.msg.quote': '引用',
@@ -2410,10 +3895,10 @@ index 9eed743214..9f215bede4 100644
 +  background: linear-gradient(to bottom, #6db8f0, #2d80d0);
 +}
 diff --git a/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css b/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css
-index 6146d42810..7b30151d28 100644
+index 6146d42810..88ddc151e6 100644
 --- a/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css
 +++ b/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css
-@@ -363,3 +363,88 @@
+@@ -363,3 +363,129 @@
  .root[data-phase='settling'] .composerSeat {
    visibility: hidden;
  }
@@ -2502,20 +3987,63 @@ index 6146d42810..7b30151d28 100644
 +body[data-ds-skin='qq2006']:not([data-qq-font]) .root {
 +  --qq-msg-font-size: 13px;
 +}
++
++/* ── QQ2006 皮肤：侧栏展开小钮 ─────────────────────────────────────────
++   侧栏收起后浮于聊天区右缘（原版 QQ2006 面板边界箭头钮语义）：sticky 钉在
++   滚动口顶缘右端，消息滚动时不离开视口。可见性三条件全中才显示——皮肤激活、
++   布局框架收起 details 列（[data-details-collapsed] 在框架元素上，本钮是
++   其子孙）、会话处于 active 相位；默认皮肤/详情展开/无会话（hero）一律
++   display:none（基类兜底）。负下边距抵消自身高度，不挤压消息区。按钮沿用
++   本包 QQ 风格：白→浅蓝渐变 + 藏青描边，hover 加深、active 凹陷。 */
++.detailsReopen {
++  position: sticky;
++  top: 8px;
++  align-self: flex-end;
++  z-index: 8;
++  flex: none;
++  margin-right: 4px;
++  display: none;
++  box-sizing: border-box;
++  width: 22px;
++  height: 22px;
++  margin-bottom: -22px;
++  padding: 3px;
++  place-items: center;
++  border: 1px solid rgb(120, 165, 215);
++  border-radius: 3px;
++  background: linear-gradient(to bottom, #ffffff, #cfe9fb);
++  color: rgb(30, 60, 100);
++  cursor: pointer;
++  box-shadow: 0 1px 3px rgba(30, 70, 120, 0.25);
++}
++
++body[data-ds-skin='qq2006'] [data-details-collapsed] .root[data-phase='active'] .detailsReopen {
++  display: grid;
++}
++
++body[data-ds-skin='qq2006'] .detailsReopen:hover {
++  background: linear-gradient(to bottom, #ffffff, #a8d4f4);
++}
++
++body[data-ds-skin='qq2006'] .detailsReopen:active {
++  background: linear-gradient(to bottom, #d2ecff, #9cc4ea);
++}
 diff --git a/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.tsx b/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.tsx
-index ef1221cd99..6fd9a5a316 100644
+index ef1221cd99..0bfffa2239 100644
 --- a/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.tsx
 +++ b/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.tsx
-@@ -7,6 +7,8 @@ import clsx from 'clsx'
+@@ -7,6 +7,10 @@ import clsx from 'clsx'
  import type { WorkspaceId } from '@deepseek-ai/dsh-client-runtime/client'
  import type { ConversationSlotProps, InputZone } from '../contract/slots.ts'
  import { HeroGlow, HeroShell, WorkspaceChip, workspaceLabel } from './EmptyHero.tsx'
 +import { useQqSkin } from '../qq/qq-skin.ts'
 +import { useQqWinSkin } from '../qq/qq-win-skin.ts'
++import { qqTip } from '../qq/qq-feedback.ts'
++import { playQqSound } from '../qq/qq-sound.ts'
  import css from './ConversationRoot.module.css'
  
  /** Full props composed from the slot contract. */
-@@ -14,7 +16,7 @@ export type ConversationRootProps = ConversationSlotProps
+@@ -14,7 +18,7 @@ export type ConversationRootProps = ConversationSlotProps
  
  export function ConversationRoot({
    sessionId, useSession, useSessions, useWorkspaces, useInput, useComposerBlock,
@@ -2524,7 +4052,7 @@ index ef1221cd99..6fd9a5a316 100644
  }: ConversationRootProps) {
    const openState = useSession(s => s.openState)
    const composerPhase = useSession(s => s.composerPhase)
-@@ -167,6 +169,25 @@ export function ConversationRoot({
+@@ -167,6 +171,25 @@ export function ConversationRoot({
    )
  
    const phase = settling ? 'settling' : hero ? 'hero' : 'active'
@@ -2550,7 +4078,7 @@ index ef1221cd99..6fd9a5a316 100644
    const composer = renderSlotChain(
      'conversation.composer',
      { interactions: pending, session },
-@@ -184,7 +205,7 @@ export function ConversationRoot({
+@@ -184,9 +207,32 @@ export function ConversationRoot({
    )
  
    return (
@@ -2558,7 +4086,32 @@ index ef1221cd99..6fd9a5a316 100644
 +    <div className={css.root} data-phase={phase} data-qq-win-skin={winSkin}>
        {renderSlot('conversation.session.header', {})}
        <div className={css.scrollBody} data-conversation-scroll="">
++        {/* QQ2006: 侧栏收起后浮于聊天区右缘的展开小钮。DOM 仅在皮肤下渲染
++            （useQqSkin 门控）；可见性由皮肤 CSS 决定——仅当布局框架收起
++            details 列（[data-details-collapsed]）且会话处于 active 相位时
++            显示，默认皮肤/详情展开/无会话（hero）一律隐藏。sticky 让它在
++            消息滚动时钉在滚动口顶部右缘。 */}
++        {qqSkin && (
++          <button
++            type="button"
++            className={css.detailsReopen}
++            data-details-reopen=""
++            aria-label={t('qq.side.expand')}
++            title={t('qq.side.expand')}
++            onClick={() => {
++              playQqSound('global')
++              qqTip(t('qq.side.expanded'))
++              openDetails()
++            }}
++          >
++            <svg viewBox="0 0 16 16" width="10" height="10" aria-hidden>
++              <path d="M13 3l-10 5 10 5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
++            </svg>
++          </button>
++        )}
          {renderSlot('conversation.session', {})}
+         {composerSeat}
+       </div>
 diff --git a/packages/client/ui-conversation/src/client/skeleton/ConversationSession.tsx b/packages/client/ui-conversation/src/client/skeleton/ConversationSession.tsx
 index d576aa175d..4b5ed6d79b 100644
 --- a/packages/client/ui-conversation/src/client/skeleton/ConversationSession.tsx
@@ -2648,10 +4201,10 @@ index d576aa175d..4b5ed6d79b 100644
                ))}
              </div>
 diff --git a/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.module.css b/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.module.css
-index cc5d732e45..ff6f1ee1f5 100644
+index cc5d732e45..91568dfb9b 100644
 --- a/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.module.css
 +++ b/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.module.css
-@@ -92,3 +92,162 @@
+@@ -92,3 +92,194 @@
  .code[data-error] {
    color: var(--dsw-alias-state-error-primary);
  }
@@ -2814,15 +4367,49 @@ index cc5d732e45..ff6f1ee1f5 100644
 +body[data-ds-skin='qq2006'] .qqZoneNum {
 +  color: red;
 +}
++
++/* 顶部收缩行（原版 QQ2006 客户端语义：面板顶右一枚小箭头钮收起右侧栏）：
++   右对齐 50×20 QQ 条钮，IMSidebarButtonExpand 三态砖打底（Normal/Hover/
++   Down），» 箭头藏青描边，随钮切换三态。 */
++body[data-ds-skin='qq2006'] .qqSideCollapse {
++  display: flex;
++  flex: none;
++  justify-content: flex-end;
++}
++
++body[data-ds-skin='qq2006'] .qqSideCollapseBtn {
++  display: grid;
++  place-items: center;
++  box-sizing: border-box;
++  width: 50px;
++  height: 20px;
++  padding: 0;
++  border: 0;
++  background-color: transparent;
++  background-image: url('/qq2006/img/im/IMSidebarButtonExpand_Normal.png');
++  background-size: 100% 100%;
++  color: rgb(30, 60, 100);
++  cursor: pointer;
++}
++
++body[data-ds-skin='qq2006'] .qqSideCollapseBtn:hover {
++  background-image: url('/qq2006/img/im/IMSidebarButtonExpand_Hover.png');
++}
++
++body[data-ds-skin='qq2006'] .qqSideCollapseBtn:active {
++  background-image: url('/qq2006/img/im/IMSidebarButtonExpand_Down.png');
++}
 diff --git a/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.tsx b/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.tsx
-index 8d11e3c5ea..c533b799ac 100644
+index 8d11e3c5ea..f51e242ae5 100644
 --- a/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.tsx
 +++ b/packages/client/ui-conversation/src/client/skeleton/DetailsPanel.tsx
-@@ -12,11 +12,83 @@ import { shallowEqual } from '@deepseek-ai/dsh-client-runtime/client'
+@@ -12,11 +12,105 @@ import { shallowEqual } from '@deepseek-ai/dsh-client-runtime/client'
  import type { ConversationSnapshot, RunningToolCall, ToolCallBlock, ToolResultNode } from '@deepseek-ai/dsh-client-runtime/client'
  import type { DetailsSlotProps } from '../contract/slots.ts'
  import { findToolCall } from '../chat/tool-node-reader.ts'
++import { qqTip } from '../qq/qq-feedback.ts'
 +import { useQqSkin } from '../qq/qq-skin.ts'
++import { playQqSound } from '../qq/qq-sound.ts'
  import css from './DetailsPanel.module.css'
  
  /** Full props composed by reference from the contract (automatic shares & injected share). */
@@ -2856,18 +4443,38 @@ index 8d11e3c5ea..c533b799ac 100644
 +}
 +
 +/**
-+ * QQ2006 聊天窗口右侧 QQ 秀栏（原版 .qq-im-side）：上半「对方形象」
-+ * 钮 + show1.gif 展示区、中段「个人空间」信息区（#f6f6f6 底、藏青字、
-+ * 红色数字）、下半「我的形象」+ show3.gif。侧栏钮 hover 换 Hover 图。
-+ * @param props - session stats, friend display title, locale seat.
++ * QQ2006 聊天窗口右侧 QQ 秀栏（原版 .qq-im-side）：顶部收缩行 + 上半
++ * 「对方形象」钮 + show1.gif 展示区、中段「个人空间」信息区（#f6f6f6 底、
++ * 藏青字、红色数字）、下半「我的形象」+ show3.gif。侧栏钮 hover 换 Hover 图。
++ * 收缩行按 QQ2006 客户端语义：面板顶部一枚小箭头钮，点击收起右侧栏
++ * （closeDetails）+ QQTip 反馈 + 全局点击音。
++ * @param props - session stats, friend display title, locale seat, close verb.
 + * @returns the QQ 秀 sidebar.
 + */
-+function QqShowSidebar({ stats, t }: {
++function QqShowSidebar({ stats, t, closeDetails }: {
 +  stats: QqShowStats
 +  t: DetailsPanelProps['t']
++  closeDetails: () => void
 +}) {
 +  return (
 +    <div className={css.qqSide} data-qq-show-side>
++      <div className={css.qqSideCollapse}>
++        <button
++          type="button"
++          className={css.qqSideCollapseBtn}
++          aria-label={t('qq.side.collapse')}
++          title={t('qq.side.collapse')}
++          onClick={() => {
++            playQqSound('global')
++            qqTip(t('qq.side.collapsed'))
++            closeDetails()
++          }}
++        >
++          <svg viewBox="0 0 16 16" width="10" height="10" aria-hidden>
++            <path d="M3 3l10 5-10 5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
++          </svg>
++        </button>
++      </div>
 +      <section className={css.qqShowSection}>
 +        <button type="button" className={css.qqSideBtn}>{t('qq.side.theirAvatar')}</button>
 +        <div
@@ -2902,7 +4509,7 @@ index 8d11e3c5ea..c533b799ac 100644
  /**
   * Selected call material: the call's display name and args plus the frozen
   * block slice it came from. `block` is a snapshot-cached reference, so the
-@@ -69,12 +141,26 @@ export function DetailsPanel({ useSession, useSessions, sessionId, useStore, ren
+@@ -69,12 +163,26 @@ export function DetailsPanel({ useSession, useSessions, sessionId, useStore, ren
    // against it, which the pure presenter cannot see.
    const sessionCwd = useSessions(list => list.byId[sessionId]?.cwd)
    const callId = selection?.callId
@@ -2921,7 +4528,7 @@ index 8d11e3c5ea..c533b799ac 100644
 +  if (qqSkin) {
 +    return (
 +      <div className={css.root}>
-+        <QqShowSidebar stats={qqStats} t={t} />
++        <QqShowSidebar stats={qqStats} t={t} closeDetails={closeDetails} />
 +      </div>
 +    )
 +  }
@@ -4060,6 +5667,110 @@ index c9f2dedb14..a894d4ce01 100644
      await b.runtime.dispose()
    })
  
+diff --git a/packages/client/ui-conversation/tests/gate-branch-tails.client.spec.tsx b/packages/client/ui-conversation/tests/gate-branch-tails.client.spec.tsx
+index 588ca52c43..59784b9422 100644
+--- a/packages/client/ui-conversation/tests/gate-branch-tails.client.spec.tsx
++++ b/packages/client/ui-conversation/tests/gate-branch-tails.client.spec.tsx
+@@ -208,3 +208,99 @@ describe('render branch tails', () => {
+     })
+   })
+ })
++
++describe('QQ2006 皮肤：QQ 秀侧栏收缩', () => {
++  /** Shared seats for the skin DetailsPanel render (QQ 秀 sidebar branch). */
++  function renderSkinSidebar(closeDetails: () => void = vi.fn()) {
++    const snap = snapshotBase()
++    const chat = createChatStore().create()
++    const emptyList = createSnapshotStore<SessionListState>(
++      { ids: [], byId: {}, current: undefined, phase: 'ready', subagentsByParent: {}, jobsBySession: {}, currentAddress: undefined })
++    const emptyWorkspaces = createSnapshotStore<WorkspaceListState>({
++      items: [], archivedSessionIds: [], state: 'idle', phase: 'ready', error: null,
++      baselinesReady: true, recentWorkspaceId: undefined,
++    })
++    document.body.setAttribute('data-ds-skin', 'qq2006')
++    const view = render(
++      <DetailsPanel
++        SessionProvider={SessionProviderStub}
++        renderSlot={renderToolDetailsProbe()}
++        sessionId={SID}
++        useSession={bindSnapshotSelector({ getSnapshot: () => snap, subscribe: () => () => {} })}
++        useSessions={bindSnapshotSelector(emptyList)}
++        useWorkspaces={bindSnapshotSelector(emptyWorkspaces)}
++        useProjection={(() => undefined)}
++        useInput={(() => { throw new Error('unused') })}
++        inputActions={{
++          setDraft: () => {},
++          addImages: () => true,
++          removeImage: () => {},
++          pruneImages: () => {},
++          submit: () => {},
++        }}
++        useStore={bindSnapshotSelector(chat)}
++        actions={chat.actions}
++        closeDetails={closeDetails}
++        t={t}
++      />,
++    )
++    return { view, closeDetails }
++  }
++
++  it('default skin renders no QQ 秀 sidebar and no collapse control', () => {
++    document.body.removeAttribute('data-ds-skin')
++    const snap = snapshotBase()
++    const chat = createChatStore().create()
++    const emptyList = createSnapshotStore<SessionListState>(
++      { ids: [], byId: {}, current: undefined, phase: 'ready', subagentsByParent: {}, jobsBySession: {}, currentAddress: undefined })
++    const emptyWorkspaces = createSnapshotStore<WorkspaceListState>({
++      items: [], archivedSessionIds: [], state: 'idle', phase: 'ready', error: null,
++      baselinesReady: true, recentWorkspaceId: undefined,
++    })
++    const view = render(
++      <DetailsPanel
++        SessionProvider={SessionProviderStub}
++        renderSlot={renderToolDetailsProbe()}
++        sessionId={SID}
++        useSession={bindSnapshotSelector({ getSnapshot: () => snap, subscribe: () => () => {} })}
++        useSessions={bindSnapshotSelector(emptyList)}
++        useWorkspaces={bindSnapshotSelector(emptyWorkspaces)}
++        useProjection={(() => undefined)}
++        useInput={(() => { throw new Error('unused') })}
++        inputActions={{
++          setDraft: () => {},
++          addImages: () => true,
++          removeImage: () => {},
++          pruneImages: () => {},
++          submit: () => {},
++        }}
++        useStore={bindSnapshotSelector(chat)}
++        actions={chat.actions}
++        closeDetails={vi.fn()}
++        t={t}
++      />,
++    )
++    expect(view.container.querySelector('[data-qq-show-side]')).toBeNull()
++    // The default details panel keeps its own chrome (close button, no QQ 秀).
++    expect(view.getByRole('button', { name: '关闭详情' })).toBeTruthy()
++  })
++
++  it('skin: sidebar top collapse button closes details and answers with a QQTip', () => {
++    const closeDetails = vi.fn()
++    const { view } = renderSkinSidebar(closeDetails)
++    const side = view.container.querySelector('[data-qq-show-side]')
++    expect(side).not.toBeNull()
++    // The collapse control is the first row of the sidebar.
++    const btn = side?.querySelector<HTMLButtonElement>('button[aria-label="收起侧栏"]')
++    expect(btn).not.toBeNull()
++    btn?.click()
++    expect(closeDetails).toHaveBeenCalledTimes(1)
++    const tip = document.querySelector('[data-qq-tip]')
++    expect(tip?.textContent).toBe('已收起侧栏')
++    // Leave the harness clean: drop the tip host and the skin attribute.
++    document.querySelectorAll('[data-qq-tip]').forEach(node => node.remove())
++    const host = document.body.lastElementChild
++    if (host !== null && (host.className ?? '').includes('_host')) host.remove()
++    document.body.removeAttribute('data-ds-skin')
++  })
++})
 diff --git a/packages/client/ui-conversation/tests/qq-message-actions.client.spec.tsx b/packages/client/ui-conversation/tests/qq-message-actions.client.spec.tsx
 new file mode 100644
 index 0000000000..b7332eaade
