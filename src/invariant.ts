@@ -1,13 +1,13 @@
 /**
- * Package-owned invariant companion for `@deepseek-ai/dsh-client-ui-skin-qq2006`.
- * @module @deepseek-ai/dsh-client-ui-skin-qq2006/invariant
+ * Package-owned invariant companion for `@dsh-external/dsh-qq2006`.
+ * @module @dsh-external/dsh-qq2006/invariant
  */
 
 /* jscpd:ignore-start */
 import type { Context } from '@deepseek-ai/cordis'
 import type { InvariantInstaller } from '@deepseek-ai/dsh-invariants'
 
-const PACKAGE_NAME = '@deepseek-ai/dsh-client-ui-skin-qq2006'
+const PACKAGE_NAME = '@dsh-external/dsh-qq2006'
 
 /** Cordis companion plugin name. */
 export const name = 'client-ui-skin-qq2006-invariant'
