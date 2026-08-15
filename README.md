@@ -16,7 +16,6 @@ QQ2006 皮肤插件：注册珊瑚蓝主题、镜像 `body[data-ds-skin]`、全�
   <img src="https://img.shields.io/badge/DSH-DeepSeek%20Harness-4d6bfe?style=flat-square" alt="DSH" />
   <img src="https://img.shields.io/badge/type-skin-orange?style=flat-square" alt="skin" />
 
-  <a href="https://whyihaveyou.github.io/dsh-suite/"><img src="https://img.shields.io/badge/featured%20on-dsh--suite-4d6bfe?style=flat-square" alt="dsh-suite" /></a>
   <a href="https://github.com/LaplaceYoung/dsh-qq2006/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs" /></a>
 </p>
 
