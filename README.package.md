@@ -4,9 +4,10 @@
 
 ## 机制（地基已完成，勿改动）
 
-- 皮肤 = 注册主题 `qq2006`（`ctx.theme.register`，见 `src/client/index.ts`），
-  在设置 → 外观（Appearance 行）作为第 4 个选项出现（light/dark/system/QQ2006 皮肤），
-  偏好持久化在 localStorage `dsh.theme`。
+- 皮肤 = 插件自带开关（`settings.general.item`，DSH ≥ rc.7 另有
+  `settings.plugin.item` 卡片）。当前上游 Appearance 行仍只渲染 light/dark/system。
+  开启后走 `theme.overrideTokens`（新）或 `register` + `setTheme('qq2006')`（旧），
+  偏好持久化在 `dsh.qq2006.enabled` / Host settings 命名空间 `qq2006`。
 - 生效标志：`body[data-ds-skin='qq2006']`（插件镜像 + boot.tsx 提前恢复，加载页也能被皮肤）。
 - 全局皮肤表：`src/styles/qq2006.css`（由 web shell 的 base.css 引入）。
   含字体、滚动条、九宫格工具类（`.qq-skin-title/.qq-skin-head/.qq-skin-body`）、

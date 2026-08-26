@@ -1,9 +1,10 @@
 /* QQ2006 skin sheet — the global half of the skin.
  *
  * Scope discipline: EVERY rule in this file is anchored to
- * `body[data-ds-skin='qq2006']`, the attribute the ui-skin-qq2006 plugin
- * mirrors (and boot.tsx restores before the loading page renders). The
- * default skin is therefore untouched by this file.
+ * `body[data-ds-skin='qq2006']`, the attribute the plugin writes when the
+ * settings toggle is on. The client injects this sheet itself (npm installs
+ * never see a monorepo `base.css` import). The default skin is therefore
+ * untouched by this file.
  *
  * Contents: retro typography, selection, scrollbars, and the shared skin
  * kit — the classic three-slice window chrome (.qq-skin-title / .qq-skin-head

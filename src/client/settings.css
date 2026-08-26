@@ -1,0 +1,67 @@
+/* Settings chrome for the plugin-owned toggle. Not scoped to data-ds-skin:
+   the row must stay visible while the skin is off. */
+
+.qq2006-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--dsw-alias-border-l2, rgb(120, 165, 215));
+}
+
+.qq2006-settings-title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--dsw-alias-label-primary, rgb(35, 55, 80));
+}
+
+.qq2006-settings-hint {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dsw-alias-label-secondary, rgb(90, 108, 128));
+}
+
+.qq2006-settings-row {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.qq2006-settings-cube {
+  box-sizing: border-box;
+  flex: 1 1 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border: 1px solid var(--dsw-alias-border-l2, rgb(120, 165, 215));
+  border-radius: 16px;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--dsw-alias-label-primary, rgb(35, 55, 80));
+  cursor: pointer;
+}
+
+.qq2006-settings-cube:hover:not(.qq2006-settings-cube-on) {
+  background: var(--dsw-alias-interactive-bg-hover, rgb(222, 238, 252));
+}
+
+.qq2006-settings-cube-on {
+  background: var(--dsw-alias-bg-module-platform, rgb(235, 245, 254));
+  border-color: rgb(45, 128, 208);
+}
+
+.qq2006-plugin-card {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+  font-size: 13px;
+  color: var(--dsw-alias-label-primary, #333);
+}
