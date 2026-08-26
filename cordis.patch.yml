@@ -1,7 +1,6 @@
-# dsh-qq2006 bundle patch: mount the QQ2006 skin plugin as a client-plugin
-# row in the browser roster. Applied after dsh-base and dsh-web-app; the
-# row joins the client plugin list beside ui-theme (which owns the theme
-# registry this skin registers into).
-
-- id: ui-skin-qq2006
-  name: '@dsh-external/dsh-qq2006'
+# dsh-qq2006 bundle patch: insert the QQ2006 skin plugin as a new roster
+# row. A bare `{ id, name }` entry is an id-targeted overlay and is skipped
+# when `ui-skin-qq2006` is not already in the composition (see #5).
+- insert:
+    - id: ui-skin-qq2006
+      name: '@dsh-external/dsh-qq2006'

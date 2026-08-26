@@ -6,15 +6,16 @@
 
 ## 开启方式
 
-设置 → 外观 → **QQ2006 皮肤**（Appearance 行第 4 个选项；偏好持久化于
-localStorage `dsh.theme`，刷新后保持）。默认皮肤零影响（所有皮肤样式锚定
+设置 → 通用 → **QQ2006 皮肤**（当前 DSH 外观行仍是浅色 / 深色 / 跟随系统；
+偏好持久化于 `dsh.qq2006.enabled`，DSH ≥ 0.1.0-rc.7 同时写入 Host settings
+命名空间 `qq2006`）。默认皮肤零影响（所有皮肤样式锚定
 `body[data-ds-skin='qq2006']`）。
 
 ## 架构
 
 | 层 | 位置 |
 |---|---|
-| 主题注册 + body 属性镜像 + reload 持久化 | `packages/client/ui-skin-qq2006`（`QQ2006_TOKENS`、`data-ds-skin`） |
+| 主题/token 叠加 + body 属性镜像 + 设置开关 | `packages/client/ui-skin-qq2006` / 本插件（`QQ2006_TOKENS`、`data-ds-skin`、`settings.general.item`） |
 | 全局皮肤表（字体/滚动条/九宫格工具类/焦点环） | `packages/client/ui-skin-qq2006/src/styles/qq2006.css`（由 shell `base.css` 引入，加载页也可用） |
 | 组件皮肤段 | 各 `ui-*` 包 `.module.css` 尾部 `body[data-ds-skin='qq2006']` 作用域（外观行选中 cube 金环、命令面板内部控件等） |
 | 气泡 | 自己气泡经典蓝预设为 **QQ 原版淡蓝渐变**（白→浅蓝；其他换肤预设保持平面淡色） |
