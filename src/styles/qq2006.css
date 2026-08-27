@@ -250,6 +250,14 @@ body[data-ds-skin='qq2006'] #root > * > *:first-child {
   border-right: 1px solid #7aa5d6 !important;
 }
 
+body[data-ds-skin='qq2006'] #root > * > *:first-child > *:first-child {
+  background: transparent !important;
+}
+
+body[data-ds-skin='qq2006'] #root button {
+  border-radius: 3px !important;
+}
+
 /* Conversation / hero column. */
 body[data-ds-skin='qq2006'] #root > * > *:nth-child(2) {
   background:
@@ -286,14 +294,45 @@ body[data-ds-skin='qq2006'] #root :is(div):has(> [contenteditable='true']) {
   background: #fff !important;
 }
 
-/* Settings dialog → framed QQ window instead of a 24px pill. */
+/* Settings dialog → framed QQ window. The modal covers the shell, so this
+   is the surface the toggle must repaint immediately. */
 body[data-ds-skin='qq2006'] [role='dialog'] {
-  border-radius: 2px !important;
-  border: 1px solid #245488 !important;
+  box-sizing: border-box;
+  padding-top: 24px !important;
+  border-radius: 0 !important;
+  border: 2px solid #1f5f9e !important;
   box-shadow: 0 0 0 1px #9ec4e8, 0 8px 24px rgba(20, 60, 110, 0.35) !important;
-  background: #eaf4fc !important;
+  background: #d6ebfb !important;
+  overflow: hidden;
+}
+
+body[data-ds-skin='qq2006'] [role='dialog']::before {
+  content: 'Settings · QQ2006';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  color: #fff;
+  font: 700 12px Tahoma, 'Microsoft YaHei', sans-serif;
+  text-shadow: 0 1px 0 #14508c;
+  background: linear-gradient(to bottom, #1f6bb3 0%, #3d8ad4 45%, #6eb4ea 100%);
+  z-index: 2;
 }
 
 body[data-ds-skin='qq2006'] [role='dialog'] button {
-  border-radius: 3px;
+  border-radius: 3px !important;
+}
+
+body[data-ds-skin='qq2006'] .qq2006-settings-cube {
+  border-radius: 3px !important;
+  background: linear-gradient(to bottom, #ffffff, #cfe6f8);
+}
+
+body[data-ds-skin='qq2006'] .qq2006-settings-cube-on {
+  background: linear-gradient(to bottom, #ffe762, #fcb833) !important;
+  border-color: #c48a10 !important;
+  color: #3a2a00 !important;
 }
