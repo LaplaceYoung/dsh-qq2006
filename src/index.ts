@@ -3,7 +3,8 @@
  *
  * On DSH 0.1.0-rc.7+ this registers the `qq2006` settings namespace so the
  * Plugins → 插件配置 tab can pair a `settings.plugin.item` card with it.
- * The client half still works without this (localStorage + General row).
+ * DSH 0.1.2-alpha.1 still uses `installSettingsSection`; missing peers
+ * (rc.5/rc.6) are not fatal — the client persists via localStorage.
  */
 import type { Context } from '@deepseek-ai/cordis'
 
@@ -20,10 +21,13 @@ export interface Qq2006Settings {
 
 /**
  * Register the optional settings section when `@deepseek-ai/dsh-settings`
- * is present. Missing peers (DSH 0.1.0-rc.5/rc.6) are not fatal.
+ * is present. The cookbook `apply(ctx, config)` seat is accepted so a later
+ * overlay can seed `enabled` as the composition `base`.
  * @param ctx - host cordis context.
+ * @param config - optional composition entry (defaults stay off).
  */
-export async function apply(ctx: Context): Promise<void> {
+export async function apply(ctx: Context, config: Partial<Qq2006Settings> = {}): Promise<void> {
+  const base: Qq2006Settings = { enabled: config.enabled === true }
   try {
     const [{ installSettingsSection, settingsNamespace }, schemastery] = await Promise.all([
       import('@deepseek-ai/dsh-settings'),
@@ -33,7 +37,7 @@ export async function apply(ctx: Context): Promise<void> {
     const Config = z.object({
       enabled: z.boolean().default(false),
     })
-    installSettingsSection(ctx, settingsNamespace(SETTINGS_NS), Config, { enabled: false }, {
+    installSettingsSection(ctx, settingsNamespace(SETTINGS_NS), Config, base, {
       setSource: () => {},
       onChange: () => {},
     })

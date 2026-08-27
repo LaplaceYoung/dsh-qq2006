@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.2
+
+Aligns the released plugin with upstream DSH `0.1.2-alpha.1`.
+
+### DSH 0.1.2-alpha.1 alignment
+
+- Drop `dsh.client.immediately`. 0.1.2 reserves that flag for stage-one
+  infrastructure rows; a feature skin is an ordinary application plugin.
+- Rewrite `dsh.client.inject` to the web roster packages this plugin
+  actually collaborates with (`ui-theme`, `locale`, `ui-renderer`,
+  `ui-settings`, `ui-settings-plugins`). `ui-slots` is a shell baseline
+  module, not a graph row.
+- Register zh / en copy through `ctx.locale` (`settings.qq2006`) so the
+  new third-party UI language path and the `t` seat on settings rows work.
+  Hosts without `locale` keep the previous baked Chinese strings.
+- Host `apply(ctx, config)` now accepts the cookbook composition seat and
+  uses it as the settings `base` (`enabled` still defaults to off).
+- Add a `prepare` script so a git `dsh plugin add` rebuilds `lib/client.js`
+  after pnpm allowlists the package.
+
+Appearance is still Light / Dark / System only. The plugin still owns the
+**QQ2006 皮肤** toggle and `overrideTokens` overlay.
+
 ## 0.1.1
 
 Fixes the released `dsh plugin` install path reported in #5, and aligns the

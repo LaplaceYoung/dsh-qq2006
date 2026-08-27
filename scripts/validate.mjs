@@ -19,10 +19,24 @@ const check = (name, cond, detail) => {
   if (!cond) failures.push(`${name}: ${detail}`)
 }
 
-check('version', pkg.version === '0.1.1', `expected 0.1.1, got ${pkg.version}`)
+check('version', pkg.version === '0.1.2', `expected 0.1.2, got ${pkg.version}`)
 check('files has cordis.patch.yml', Array.isArray(pkg.files) && pkg.files.includes('cordis.patch.yml'), JSON.stringify(pkg.files))
 check('exports has cordis.patch.yml', pkg.exports?.['./cordis.patch.yml'] === './cordis.patch.yml', 'missing export')
 check('dsh.bundle.patch', pkg.dsh?.bundle?.patch === './cordis.patch.yml', 'bundle patch path')
+check(
+  'immediately is not set',
+  pkg.dsh?.client?.immediately !== true,
+  '0.1.2 reserves immediately:true for infrastructure rows',
+)
+check(
+  'inject lists roster packages, not ui-slots',
+  Array.isArray(pkg.dsh?.client?.inject)
+    && pkg.dsh.client.inject.includes('@deepseek-ai/dsh-client-ui-theme')
+    && pkg.dsh.client.inject.includes('@deepseek-ai/dsh-client-locale')
+    && pkg.dsh.client.inject.includes('@deepseek-ai/dsh-client-ui-settings')
+    && !pkg.dsh.client.inject.includes('@deepseek-ai/dsh-client-ui-slots'),
+  JSON.stringify(pkg.dsh?.client?.inject),
+)
 check('patch uses insert', /^\s*-\s*insert:\s*$/m.test(patch), patch)
 check('patch id', /id:\s*ui-skin-qq2006/.test(patch), patch)
 check('patch name', /name:\s*'@dsh-external\/dsh-qq2006'/.test(patch), patch)
@@ -78,7 +92,9 @@ check('client registers general item', client.includes("settings.general.item") 
 check('client registers plugin card', client.includes("settings.plugin.item"), 'missing rc.7+ card')
 check('client uses overrideTokens', client.includes('overrideTokens'), 'missing latest token API')
 check('client does not persist via dsh.theme write-only', client.includes('dsh.qq2006.enabled'), 'missing own store key')
+check('client registers locale dictionaries', client.includes('settings.qq2006') && client.includes('locale.register'), 'missing 0.1.2 locale register')
 check('host registers settings namespace', host.includes('qq2006') && host.includes('installSettingsSection'), 'host settings missing')
+check('host apply accepts config', /export async function apply\(ctx,\s*config/.test(host), 'missing apply(ctx, config) seat')
 
 // Host module loads without the optional settings peer.
 const hostUrl = pathToFileURL(join(root, 'lib/index.js')).href

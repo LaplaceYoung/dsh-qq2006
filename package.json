@@ -1,7 +1,7 @@
 {
   "name": "@dsh-external/dsh-qq2006",
-  "description": "QQ2006 skin plugin for DSH (DeepSeek Harness): coral-blue --dsw-alias-* overlay, body[data-ds-skin] mirror, global qq2006.css sheet, and a settings toggle (Appearance row is still the built-in trio on current DSH).",
-  "version": "0.1.1",
+  "description": "QQ2006 skin plugin for DSH (DeepSeek Harness): coral-blue --dsw-alias-* overlay, body[data-ds-skin] mirror, global qq2006.css sheet, zh/en locale copy, and a settings toggle (Appearance row is still the built-in trio on DSH 0.1.2-alpha.1).",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "main": "lib/index.js",
@@ -29,6 +29,9 @@
     "@deepseek-ai/cordis": ">=4.0.1",
     "@deepseek-ai/dsh-client-ui-theme": ">=0.0.1",
     "@deepseek-ai/dsh-client-ui-slots": ">=0.0.1",
+    "@deepseek-ai/dsh-client-locale": ">=0.0.1",
+    "@deepseek-ai/dsh-client-ui-settings": ">=0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-settings-plugins": ">=0.1.0-rc.7",
     "@deepseek-ai/dsh-settings": ">=0.1.0-rc.7",
     "@deepseek-ai/schemastery": ">=3.16.0",
     "@deepseek-ai/dsh-invariants": ">=0.0.1-rc.1"
@@ -38,6 +41,15 @@
       "optional": true
     },
     "@deepseek-ai/dsh-client-ui-slots": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-locale": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-ui-settings": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-ui-settings-plugins": {
       "optional": true
     },
     "@deepseek-ai/dsh-settings": {
@@ -57,10 +69,12 @@
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-ui-theme",
-        "@deepseek-ai/dsh-client-ui-slots"
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
       ],
-      "platform": "web",
-      "immediately": true
+      "platform": "web"
     }
   },
   "files": [
@@ -73,6 +87,7 @@
   ],
   "scripts": {
     "build": "node scripts/build-client.mjs",
+    "prepare": "node scripts/build-client.mjs",
     "validate": "node scripts/validate.mjs",
     "test": "node scripts/validate.mjs",
     "bundle": "node -e \"console.error('bundle runs inside the DSH monorepo (packages/client/ui-skin-qq2006); use npm run build to refresh lib/client.js')\""

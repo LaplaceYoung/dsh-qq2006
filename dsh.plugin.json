@@ -1,8 +1,8 @@
 {
   "id": "ui-skin-qq2006",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "lib/index.js",
-  "description": "QQ2006 skin for DSH WebUI: coral-blue token overlay, global skin sheet, and a settings toggle that does not depend on the hardcoded Appearance cubes.",
+  "description": "QQ2006 skin for DSH WebUI: coral-blue token overlay, global skin sheet, zh/en locale copy, and a settings toggle that does not depend on the hardcoded Appearance cubes.",
   "engines": {
     "dsh": ">=0.1.0-rc.5"
   },

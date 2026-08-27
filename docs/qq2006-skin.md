@@ -6,10 +6,11 @@
 
 ## 开启方式
 
-设置 → 通用 → **QQ2006 皮肤**（当前 DSH 外观行仍是浅色 / 深色 / 跟随系统；
-偏好持久化于 `dsh.qq2006.enabled`，DSH ≥ 0.1.0-rc.7 同时写入 Host settings
-命名空间 `qq2006`）。默认皮肤零影响（所有皮肤样式锚定
-`body[data-ds-skin='qq2006']`）。
+设置 → 通用 → **QQ2006 皮肤**（当前 DSH 外观行仍是浅色 / 深色 / 跟随系统，
+到 `dsh-v0.1.2-alpha.1`；偏好持久化于 `dsh.qq2006.enabled`，DSH ≥ 0.1.0-rc.7
+同时写入 Host settings 命名空间 `qq2006`）。0.1.2 起开关文案走
+`ctx.locale.register('settings.qq2006', { zh, en })`。默认皮肤零影响（所有皮肤
+样式锚定 `body[data-ds-skin='qq2006']`）。
 
 ## 架构
 
