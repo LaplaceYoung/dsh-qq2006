@@ -15,4 +15,4 @@ export interface Qq2006Settings {
  * Register the optional settings section when `@deepseek-ai/dsh-settings`
  * is present. Missing peers are not fatal.
  */
-export declare function apply(ctx: Context): Promise<void>
+export declare function apply(ctx: Context, config?: Partial<Qq2006Settings>): Promise<void>
