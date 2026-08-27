@@ -13,13 +13,13 @@ const OVERRIDE_SOURCE = '@dsh-external/dsh-qq2006'
 const PACKAGE_ID = '@dsh-external/dsh-qq2006'
 const ZH = {
   'skin.title': 'QQ2006 皮肤',
-  'skin.hint': '外观行仍是浅色 / 深色 / 跟随系统。打开后由本插件叠加珊瑚蓝 token，并点亮 data-ds-skin。',
+  'skin.hint': '开启后把当前 DSH 壳换成 QQ2006 蓝框（标题栏、侧栏、输入区）。外观行仍是浅色 / 深色 / 跟随系统。',
   'skin.on': '开启',
   'skin.off': '关闭',
 }
 const EN = {
   'skin.title': 'QQ2006 skin',
-  'skin.hint': 'Appearance is still Light / Dark / System. When on, this plugin overlays coral-blue tokens and sets data-ds-skin.',
+  'skin.hint': 'When on, the live DSH shell becomes a QQ2006 blue frame (title bar, sidebar, composer). Appearance stays Light / Dark / System.',
   'skin.on': 'On',
   'skin.off': 'Off',
 }

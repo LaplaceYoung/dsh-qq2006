@@ -1,6 +1,6 @@
 {
   "name": "@dsh-external/dsh-qq2006",
-  "description": "QQ2006 skin plugin for DSH (DeepSeek Harness): coral-blue --dsw-alias-* overlay, body[data-ds-skin] mirror, global qq2006.css sheet, zh/en locale copy, and a settings toggle (Appearance row is still the built-in trio on DSH 0.1.2-alpha.1).",
+  "description": "QQ2006 skin plugin for DSH (DeepSeek Harness): visible blue-frame chrome on the live DSH 0.1.2 shell, coral-blue --dsw-alias-* / --dsw-specific-* overlay, body[data-ds-skin] mirror, zh/en locale copy, and a settings toggle (Appearance row is still the built-in trio).",
   "version": "0.1.2",
   "private": true,
   "type": "module",

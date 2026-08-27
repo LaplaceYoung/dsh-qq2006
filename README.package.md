@@ -10,10 +10,12 @@
   `register` + `setTheme('qq2006')`（旧），偏好持久化在 `dsh.qq2006.enabled` /
   Host settings 命名空间 `qq2006`。0.1.2 起开关文案注册到 `settings.qq2006`。
 - 生效标志：`body[data-ds-skin='qq2006']`（插件镜像 + boot.tsx 提前恢复，加载页也能被皮肤）。
-- 全局皮肤表：`src/styles/qq2006.css`（由 web shell 的 base.css 引入）。
-  含字体、滚动条、九宫格工具类（`.qq-skin-title/.qq-skin-head/.qq-skin-body`）、
-  三态标题钮（`.qq-skin-btn-min/-color/-close`）、渐变按钮 `.qq-btn`、状态点 `.qq-skin-status`。
-- 主题 token 覆盖：`QQ2006_TOKENS`（`--dsw-alias-*` 珊瑚蓝体系，body 内联变量）。
+- 全局皮肤表：`src/styles/qq2006.css`（插件自己注入；npm 安装看不到 monorepo
+  `base.css`）。含字体、滚动条、九宫格工具类、以及 **stock DSH 壳层覆盖**
+  （`#root` 蓝标题栏、侧栏、输入区、`role=dialog`）。`.qq-skin-*` / `.qq-btn`
+  仍留给 monorepo 组件补丁。
+- 主题 token 覆盖：`QQ2006_TOKENS`（`--dsw-alias-*` 与 `--dsw-specific-*`，
+  由 ui-layout 的 theme presenter 写到 body）。
 
 ## 组件级补丁规则（子智能体的主要工作）
 

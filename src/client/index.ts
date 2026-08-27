@@ -13,7 +13,8 @@
  *    `qq2006` namespace is served).
  * 3. When on: set `body[data-ds-skin=qq2006]` and apply coral-blue tokens
  *    via `theme.overrideTokens` (rc.7+) or `theme.register` + `setTheme`
- *    (rc.5/rc.6).
+ *    (rc.5/rc.6). The injected sheet also restyles the live DSH 0.1.2
+ *    shell (title bar, sidebar, composer, settings dialog).
  * 4. Register 设置 → 通用 → QQ2006 皮肤, plus 设置 → 插件 card on rc.7+.
  * 5. Register zh/en copy through `ctx.locale` (0.1.2 third-party UI language).
  */

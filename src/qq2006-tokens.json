@@ -1,8 +1,8 @@
 {
-  "--dsw-alias-bg-base": "rgb(240, 247, 253)",
-  "--dsw-alias-bg-layer-1": "rgb(244, 250, 255)",
-  "--dsw-alias-bg-layer-2": "rgb(233, 243, 252)",
-  "--dsw-alias-bg-layer-3": "rgb(222, 236, 250)",
+  "--dsw-alias-bg-base": "rgb(212, 232, 248)",
+  "--dsw-alias-bg-layer-1": "rgb(234, 245, 253)",
+  "--dsw-alias-bg-layer-2": "rgb(214, 234, 250)",
+  "--dsw-alias-bg-layer-3": "rgb(190, 220, 242)",
   "--dsw-alias-bg-mask-1": "rgba(255, 255, 255, 0.92)",
   "--dsw-alias-bg-mask-2": "rgba(240, 248, 255, 0.85)",
   "--dsw-alias-bg-mask-3": "rgba(230, 241, 252, 0.8)",
@@ -76,5 +76,16 @@
   "--dsw-alias-state-warn-secondary": "rgb(252, 240, 218)",
   "--dsw-alias-state-warn-tertiary": "rgb(248, 230, 190)",
   "--dsw-alias-toast-bg": "rgb(255, 252, 232)",
-  "--dsw-alias-tooltip-bg": "rgb(255, 253, 225)"
+  "--dsw-alias-tooltip-bg": "rgb(255, 253, 225)",
+  "--dsw-specific-sidebar-fill": "rgb(198, 224, 246)",
+  "--dsw-specific-sidebar-nav-item-hover": "rgb(186, 216, 242)",
+  "--dsw-specific-sidebar-nav-item-active": "rgb(170, 206, 236)",
+  "--dsw-specific-sidebar-nav-item-active-accent": "rgb(45, 128, 208)",
+  "--dsw-specific-input-major": "rgb(255, 255, 255)",
+  "--dsw-specific-login-input": "rgb(244, 250, 255)",
+  "--dsw-specific-menu": "rgb(234, 245, 253)",
+  "--dsw-specific-selector": "rgb(222, 238, 252)",
+  "--dsw-specific-bubble": "rgb(209, 232, 255)",
+  "--dsw-specific-bubble-highlight": "rgb(186, 216, 242)",
+  "--dsw-specific-tip": "rgb(255, 253, 225)"
 }

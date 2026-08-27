@@ -88,6 +88,8 @@ check(
 
 check('client is ModuleLoader', client.includes('window.__ModuleLoader__.load'), 'missing loader wrapper')
 check('client injects CSS', client.includes('dataset.pluginCss') && client.includes('body[data-ds-skin=\'qq2006\']'), 'skin sheet not inlined')
+check('client paints host chrome', client.includes('#root::before') && client.includes('QQ2006'), 'missing visible shell overlay')
+check('tokens include specific surfaces', client.includes('--dsw-specific-sidebar-fill'), 'sidebar fill token missing')
 check('client registers general item', client.includes("settings.general.item") && client.includes('qq2006-skin'), 'missing General row')
 check('client registers plugin card', client.includes("settings.plugin.item"), 'missing rc.7+ card')
 check('client uses overrideTokens', client.includes('overrideTokens'), 'missing latest token API')

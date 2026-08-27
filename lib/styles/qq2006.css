@@ -20,8 +20,9 @@
  */
 
 body[data-ds-skin='qq2006'] {
+  --dsw-font-family: Tahoma, 'SimSun', '宋体', 'Microsoft YaHei', sans-serif;
   font-family: Tahoma, 'SimSun', '宋体', 'Microsoft YaHei', sans-serif;
-  /* Coral-blue alias tokens come from the ui-theme sheet (QQ2006_TOKENS);
+  /* Coral-blue alias tokens come from the ui-theme presenter (QQ2006_TOKENS);
      the names below are the official --dsw-alias-* set. */
   color: var(--dsw-alias-label-primary);
 }
@@ -198,4 +199,101 @@ body[data-ds-skin='qq2006'][data-qq-font='s'] {
 }
 body[data-ds-skin='qq2006'][data-qq-font='l'] {
   --qq-msg-font-size: 15px;
+}
+
+/* ── stock DSH 0.1.x shell overlay ──────────────────────────────────────────
+ * The utility kit above (.qq-skin-*, .qq-btn) only paints when host
+ * components opt in (the monorepo patch). The released plugin must still
+ * change the live DSH frame — title bar, sidebar, composer — or the
+ * settings toggle is a no-op. Every rule stays under data-ds-skin.
+ * Selectors use stable attributes / #root / :has(), never hashed modules.
+ */
+body[data-ds-skin='qq2006'] {
+  background: #3d7cbf !important;
+}
+
+body[data-ds-skin='qq2006'] #root {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 26px 4px 4px;
+  background:
+    linear-gradient(to bottom, #1f6bb3 0%, #3d8ad4 45%, #6eb4ea 100%) top / 100% 24px no-repeat,
+    #6ea6d8;
+  position: relative;
+}
+
+body[data-ds-skin='qq2006'] #root::before {
+  content: 'QQ2006';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  font: 700 12px Tahoma, 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0.4px;
+  text-shadow: 0 1px 0 #14508c;
+  pointer-events: none;
+  z-index: 4;
+}
+
+body[data-ds-skin='qq2006'] #root > * {
+  border: 1px solid #245488;
+  background: #d6ebfb;
+  box-shadow: inset 1px 1px 0 #eef6fd, 0 0 0 1px #9ec4e8;
+}
+
+/* Sidebar column = first grid child of the app frame. */
+body[data-ds-skin='qq2006'] #root > * > *:first-child {
+  background: #c5e0f5 !important;
+  border-right: 1px solid #7aa5d6 !important;
+}
+
+/* Conversation / hero column. */
+body[data-ds-skin='qq2006'] #root > * > *:nth-child(2) {
+  background:
+    linear-gradient(to bottom, #b9d6f0 0 28px, transparent 28px),
+    #eaf4fc;
+}
+
+body[data-ds-skin='qq2006'] button,
+body[data-ds-skin='qq2006'] input,
+body[data-ds-skin='qq2006'] select,
+body[data-ds-skin='qq2006'] textarea {
+  font-family: Tahoma, 'SimSun', '宋体', 'Microsoft YaHei', sans-serif;
+}
+
+/* New Session and other labeled sidebar actions → classic QQ gradient. */
+body[data-ds-skin='qq2006'] button[aria-label] {
+  border-radius: 3px;
+}
+
+body[data-ds-skin='qq2006'] button[aria-label*='New Session'],
+body[data-ds-skin='qq2006'] button[aria-label*='新会话'] {
+  background: linear-gradient(to bottom, #ffffff, #9fd4ff) !important;
+  border: 1px solid #00558e !important;
+  border-radius: 3px !important;
+  color: #143246 !important;
+}
+
+/* Composer card (the nearest box that owns a textarea). */
+body[data-ds-skin='qq2006'] #root :is(div):has(> textarea),
+body[data-ds-skin='qq2006'] #root :is(div):has(> [contenteditable='true']) {
+  border-radius: 2px !important;
+  border: 1px solid #7aa5d6 !important;
+  box-shadow: inset 1px 1px 0 #fff !important;
+  background: #fff !important;
+}
+
+/* Settings dialog → framed QQ window instead of a 24px pill. */
+body[data-ds-skin='qq2006'] [role='dialog'] {
+  border-radius: 2px !important;
+  border: 1px solid #245488 !important;
+  box-shadow: 0 0 0 1px #9ec4e8, 0 8px 24px rgba(20, 60, 110, 0.35) !important;
+  background: #eaf4fc !important;
+}
+
+body[data-ds-skin='qq2006'] [role='dialog'] button {
+  border-radius: 3px;
 }

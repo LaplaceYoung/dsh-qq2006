@@ -23,6 +23,12 @@ Aligns the released plugin with upstream DSH `0.1.2-alpha.1`.
 Appearance is still Light / Dark / System only. The plugin still owns the
 **QQ2006 皮肤** toggle and `overrideTokens` overlay.
 
+The first 0.1.2 cut only flipped `data-ds-skin` and a near-default token
+tint, so the live DSH shell did not visibly change. The overlay now
+restyles `#root` (classic blue title bar), the sidebar column, the
+composer card, and `role=dialog`, and the token set includes the
+`--dsw-specific-*` surfaces the 0.1.2 shell actually paints.
+
 ## 0.1.1
 
 Fixes the released `dsh plugin` install path reported in #5, and aligns the
